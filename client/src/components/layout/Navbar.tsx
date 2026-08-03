@@ -12,23 +12,23 @@ import {
 import { cn } from "@/lib/utils";
 
 const servicos = [
-  { name: "[Serviço 1]", href: "/servicos/servico-1" },
-  { name: "[Serviço 2]", href: "/servicos/servico-2" },
-  { name: "[Serviço 3]", href: "/servicos/servico-3" },
-  { name: "[Serviço 4]", href: "/servicos/servico-4" },
-  { name: "[Serviço 5]", href: "/servicos/servico-5" },
-  { name: "[Serviço 6]", href: "/servicos/servico-6" },
-  { name: "[Serviço 7]", href: "/servicos/servico-7" },
-  { name: "[Serviço 8]", href: "/servicos/servico-8" },
+  { name: "Tarot Cigano Intuitivo", href: "/servicos/tarot-cigano" },
+  { name: "Terapia de Vidas Passadas", href: "/servicos/vidas-passadas" },
+  { name: "Psicoterapia Holística", href: "/servicos/psicoterapia" },
+  { name: "Reiki & Cura Energética", href: "/servicos/reiki" },
+  { name: "Defumações & Limpeza Energética", href: "/servicos/defumacoes" },
+  { name: "Mesa Radiónica & EFT", href: "/servicos/mesa-radionica-eft" },
+  { name: "Cromoterapia & Aromaterapia", href: "/servicos/cromoterapia-aromaterapia" },
+  { name: "Proteção, Amor & Abundância", href: "/servicos/protecao-abundancia" },
 ];
 
 const areasServico = [
-  { name: "[Área 1]", href: "/areas/area-1" },
-  { name: "[Área 2]", href: "/areas/area-2" },
-  { name: "[Área 3]", href: "/areas/area-3" },
-  { name: "[Área 4]", href: "/areas/area-4" },
-  { name: "[Área 5]", href: "/areas/area-5" },
-  { name: "[Área 6]", href: "/areas/area-6" },
+  { name: "Santarém", href: "/areas/santarem" },
+  { name: "Cartaxo", href: "/areas/cartaxo" },
+  { name: "Almeirim", href: "/areas/almeirim" },
+  { name: "Tomar", href: "/areas/tomar" },
+  { name: "Torres Novas", href: "/areas/torres-novas" },
+  { name: "Consultas Online", href: "/areas/online" },
 ];
 
 export function Navbar() {
@@ -55,8 +55,8 @@ export function Navbar() {
   }, [location]);
 
   const linkClass = cn(
-    "text-sm font-black transition-colors hover:text-[#4CAF50] cursor-pointer flex items-center gap-1 uppercase tracking-tight",
-    "text-[#1B5E20] font-sans"
+    "text-sm font-black transition-colors hover:text-[#9B6DC9] cursor-pointer flex items-center gap-1 uppercase tracking-tight",
+    "text-[#2B1B4E] font-sans"
   );
 
   return (
@@ -67,7 +67,7 @@ export function Navbar() {
       )}
     >
       {/* Top Info Bar */}
-      <div className="bg-[#1B5E20] py-1.5 hidden md:block">
+      <div className="bg-[#2B1B4E] py-1.5 hidden md:block">
         <div className="container mx-auto px-4 md:px-8 xl:px-12 max-w-[1400px]">
           <div className="flex justify-between items-center text-xs md:text-sm text-white font-black tracking-tight uppercase">
             <div className="flex items-center gap-6">
@@ -75,24 +75,24 @@ export function Navbar() {
                 href="https://maps.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-[#8BC34A] transition-colors"
+                className="flex items-center gap-2 hover:text-[#E8B54D] transition-colors"
               >
                 <MapPin className="w-3.5 h-3.5" />
-                <span>[Localidade]</span>
+                <span>Santarém</span>
               </a>
               <div className="h-3 w-[1px] bg-white/30" />
-              <span>E-mail: <a href="mailto:geral@example.com" className="hover:text-[#8BC34A] transition-colors">[email]</a></span>
+              <span>E-mail: <a href="mailto:terapiassky1@gmail.com" className="hover:text-[#E8B54D] transition-colors">terapiassky1@gmail.com</a></span>
             </div>
             <div className="flex items-center gap-4">
               <div className="flex flex-col items-end">
-                <span>Contacto: <a href="tel:+000000000" className="hover:text-[#8BC34A] transition-colors">[Telefone]</a></span>
+                <span>Contacto: <a href="tel:+000000000" className="hover:text-[#E8B54D] transition-colors">[Telefone]</a></span>
               </div>
               <div className="h-3 w-[1px] bg-white/30 mx-1" />
               <div className="flex items-center gap-3">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#8BC34A] transition-all hover:scale-110">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E8B54D] transition-all hover:scale-110">
                   <Facebook className="w-4 h-4" />
                 </a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#8BC34A] transition-all hover:scale-110">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E8B54D] transition-all hover:scale-110">
                   <Instagram className="w-4 h-4" />
                 </a>
               </div>
@@ -107,7 +107,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/">
             <ImagePlaceholder
-              label="[Logótipo]"
+              label="[Logótipo SKY TERAPIA'S]"
               width={200}
               height={56}
               className="h-12 md:h-14 w-[171px] md:w-[200px] cursor-pointer"
@@ -121,7 +121,7 @@ export function Navbar() {
             </Link>
 
             <Link href="/empresa" className={linkClass}>
-              Empresa
+              Sobre Mim
             </Link>
 
             {/* Serviços Dropdown */}
@@ -132,7 +132,7 @@ export function Navbar() {
               <DropdownMenuContent className="bg-white border border-slate-200 shadow-lg rounded-md p-2 min-w-[220px]">
                 {servicos.map((servico) => (
                   <DropdownMenuItem key={servico.href} asChild>
-                    <Link href={servico.href} className="block px-4 py-2 text-sm font-medium text-[#1B5E20] hover:bg-green-50 hover:text-[#4CAF50] rounded cursor-pointer">
+                    <Link href={servico.href} className="block px-4 py-2 text-sm font-medium text-[#2B1B4E] hover:bg-purple-50 hover:text-[#9B6DC9] rounded cursor-pointer">
                       {servico.name}
                     </Link>
                   </DropdownMenuItem>
@@ -141,7 +141,7 @@ export function Navbar() {
             </DropdownMenu>
 
             <Link href="/portfolio" className={linkClass}>
-              Portfólio
+              O Espaço
             </Link>
 
             {/* Áreas de Serviço Dropdown */}
@@ -152,7 +152,7 @@ export function Navbar() {
               <DropdownMenuContent className="bg-white border border-slate-200 shadow-lg rounded-md p-2 min-w-[180px]">
                 {areasServico.map((area) => (
                   <DropdownMenuItem key={area.href} asChild>
-                    <Link href={area.href} className="block px-4 py-2 text-sm font-medium text-[#1B5E20] hover:bg-green-50 hover:text-[#4CAF50] rounded cursor-pointer">
+                    <Link href={area.href} className="block px-4 py-2 text-sm font-medium text-[#2B1B4E] hover:bg-purple-50 hover:text-[#9B6DC9] rounded cursor-pointer">
                       {area.name}
                     </Link>
                   </DropdownMenuItem>
@@ -166,9 +166,9 @@ export function Navbar() {
 
             <Link href="/orcamento">
               <Button
-                className="font-black rounded-sm px-6 h-11 transition-all uppercase text-xs tracking-wider bg-[#1B5E20] text-white hover:bg-[#4CAF50] shadow-lg hover:scale-105"
+                className="font-black rounded-sm px-6 h-11 transition-all uppercase text-xs tracking-wider bg-[#2B1B4E] text-white hover:bg-[#9B6DC9] shadow-lg hover:scale-105"
               >
-                Pedir Orçamento
+                Marcar Consulta
               </Button>
             </Link>
           </div>
@@ -179,9 +179,9 @@ export function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="w-8 h-8 text-[#1B5E20]" />
+              <X className="w-8 h-8 text-[#2B1B4E]" />
             ) : (
-              <Menu className="w-8 h-8 text-[#1B5E20]" />
+              <Menu className="w-8 h-8 text-[#2B1B4E]" />
             )}
           </button>
         </div>
@@ -192,7 +192,7 @@ export function Navbar() {
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b p-4 flex flex-col gap-2 shadow-lg animate-in slide-in-from-top-5 max-h-[80vh] overflow-y-auto">
           <Link 
             href="/" 
-            className="text-[#1B5E20] font-black py-3 px-2 hover:text-[#4CAF50] hover:bg-green-50 rounded-lg block uppercase tracking-tighter" 
+            className="text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Início
@@ -200,17 +200,17 @@ export function Navbar() {
           
           <Link 
             href="/empresa" 
-            className="text-[#1B5E20] font-black py-3 px-2 hover:text-[#4CAF50] hover:bg-green-50 rounded-lg block uppercase tracking-tighter" 
+            className="text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Empresa
+            Sobre Mim
           </Link>
 
           {/* Mobile Serviços Accordion */}
           <div>
             <button 
               onClick={() => setMobileServicosOpen(!mobileServicosOpen)}
-              className="w-full text-[#1B5E20] font-black py-3 px-2 hover:text-[#4CAF50] hover:bg-green-50 rounded-lg flex items-center justify-between uppercase tracking-tighter"
+              className="w-full text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg flex items-center justify-between uppercase tracking-tighter"
             >
               Serviços
               <ChevronDown className={cn("w-5 h-5 transition-transform", mobileServicosOpen && "rotate-180")} />
@@ -221,7 +221,7 @@ export function Navbar() {
                   <Link 
                     key={servico.href}
                     href={servico.href} 
-                    className="text-[#1B5E20]/80 font-medium py-2 px-2 hover:text-[#4CAF50] hover:bg-green-50 rounded-lg block text-sm" 
+                    className="text-[#2B1B4E]/80 font-medium py-2 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block text-sm" 
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {servico.name}
@@ -233,17 +233,17 @@ export function Navbar() {
 
           <Link 
             href="/portfolio" 
-            className="text-[#1B5E20] font-black py-3 px-2 hover:text-[#4CAF50] hover:bg-green-50 rounded-lg block uppercase tracking-tighter" 
+            className="text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Portfólio
+            O Espaço
           </Link>
 
           {/* Mobile Áreas Accordion */}
           <div>
             <button 
               onClick={() => setMobileAreasOpen(!mobileAreasOpen)}
-              className="w-full text-[#1B5E20] font-black py-3 px-2 hover:text-[#4CAF50] hover:bg-green-50 rounded-lg flex items-center justify-between uppercase tracking-tighter"
+              className="w-full text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg flex items-center justify-between uppercase tracking-tighter"
             >
               Áreas de Serviço
               <ChevronDown className={cn("w-5 h-5 transition-transform", mobileAreasOpen && "rotate-180")} />
@@ -254,7 +254,7 @@ export function Navbar() {
                   <Link 
                     key={area.href}
                     href={area.href} 
-                    className="text-[#1B5E20]/80 font-medium py-2 px-2 hover:text-[#4CAF50] hover:bg-green-50 rounded-lg block text-sm" 
+                    className="text-[#2B1B4E]/80 font-medium py-2 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block text-sm" 
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {area.name}
@@ -266,7 +266,7 @@ export function Navbar() {
 
           <Link 
             href="/contacto" 
-            className="text-[#1B5E20] font-black py-3 px-2 hover:text-[#4CAF50] hover:bg-green-50 rounded-lg block uppercase tracking-tighter" 
+            className="text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contacto
@@ -274,10 +274,10 @@ export function Navbar() {
 
           <Link href="/orcamento">
             <Button 
-              className="w-full rounded-sm mt-4 h-12 text-sm font-black uppercase tracking-wider bg-[#1B5E20] text-white"
+              className="w-full rounded-sm mt-4 h-12 text-sm font-black uppercase tracking-wider bg-[#2B1B4E] text-white"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Pedir Orçamento
+              Marcar Consulta
             </Button>
           </Link>
         </div>

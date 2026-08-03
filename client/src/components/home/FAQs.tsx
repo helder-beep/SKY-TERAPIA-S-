@@ -3,14 +3,38 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Plus, Minus } from "lucide-react";
 
 const faqs = [
-  { question: "[Pergunta frequente 1?]", answer: "[Resposta à pergunta 1.]" },
-  { question: "[Pergunta frequente 2?]", answer: "[Resposta à pergunta 2.]" },
-  { question: "[Pergunta frequente 3?]", answer: "[Resposta à pergunta 3.]" },
-  { question: "[Pergunta frequente 4?]", answer: "[Resposta à pergunta 4.]" },
-  { question: "[Pergunta frequente 5?]", answer: "[Resposta à pergunta 5.]" },
-  { question: "[Pergunta frequente 6?]", answer: "[Resposta à pergunta 6.]" },
-  { question: "[Pergunta frequente 7?]", answer: "[Resposta à pergunta 7.]" },
-  { question: "[Pergunta frequente 8?]", answer: "[Resposta à pergunta 8.]" }
+  {
+    question: "Como funciona uma sessão?",
+    answer: "Cada sessão começa com uma breve conversa para perceber o que procuras, seguida da terapia escolhida (tarot, reiki, vidas passadas, etc.). O espaço é reservado e tudo o que é partilhado fica em total sigilo."
+  },
+  {
+    question: "As sessões são presenciais ou também online?",
+    answer: "Faço atendimento presencial em Santarém e também sessões online (por exemplo, tarot ou mesa radiónica), consoante o tipo de terapia."
+  },
+  {
+    question: "Quanto tempo dura uma sessão?",
+    answer: "Depende da terapia escolhida, mas a maioria das sessões tem entre 45 a 90 minutos. Combinamos a duração antes de marcares."
+  },
+  {
+    question: "As terapias substituem acompanhamento médico ou psicológico?",
+    answer: "Não. As terapias holísticas que ofereço são complementares e não substituem tratamento médico, psicológico ou psiquiátrico. Se estás a ser acompanhado(a) por um profissional de saúde, recomendo continuares esse acompanhamento em paralelo."
+  },
+  {
+    question: "É garantida a confidencialidade?",
+    answer: "Sim. O sigilo sobre o que é partilhado nas sessões é um dos pilares do meu trabalho — nada do que falamos é partilhado com terceiros."
+  },
+  {
+    question: "Tens formação certificada?",
+    answer: "Sim, tenho formação certificada pela DGERT em Terapias Holísticas e mais de 4 anos de experiência a acompanhar clientes particulares."
+  },
+  {
+    question: "Também dás cursos ou workshops?",
+    answer: "Sim! Além das sessões individuais, dou cursos de iniciação a diferentes terapias holísticas e participo regularmente em feiras esotéricas. Contacta-me para saberes as próximas datas."
+  },
+  {
+    question: "Como posso marcar a minha sessão?",
+    answer: "Podes contactar-me por email, telefone ou WhatsApp, ou preencher o formulário na página de Marcar Consulta. Respondo o mais rápido possível para combinarmos o melhor horário."
+  }
 ];
 
 export function FAQs() {
@@ -25,13 +49,13 @@ export function FAQs() {
           viewport={{ once: true }}
           className="text-center mb-10 md:mb-16"
         >
-          <span className="text-[#4CAF50] text-xs font-black uppercase tracking-[0.3em] mb-4 block">
+          <span className="text-[#9B6DC9] text-xs font-black uppercase tracking-[0.3em] mb-4 block">
             Perguntas Frequentes
           </span>
-          <h2 className="text-[1.75rem] md:text-5xl font-black text-[#1B5E20] uppercase tracking-tight mb-4 leading-tight">
-            [Perguntas sobre <span className="text-[#4CAF50]">os Nossos Serviços]</span>
+          <h2 className="text-[1.75rem] md:text-5xl font-black text-[#2B1B4E] uppercase tracking-tight mb-4 leading-tight">
+            Perguntas sobre <span className="text-[#9B6DC9]">as Nossas Terapias</span>
           </h2>
-          <p className="text-[#1B5E20]/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+          <p className="text-[#2B1B4E]/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
             Respondemos às perguntas mais frequentes sobre os nossos serviços
           </p>
         </motion.div>
@@ -44,20 +68,20 @@ export function FAQs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="border border-[#1B5E20]/10 rounded-lg overflow-hidden"
+              className="border border-[#2B1B4E]/10 rounded-lg overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-5 md:p-6 text-left bg-white hover:bg-green-50/50 transition-colors"
+                className="w-full flex items-center justify-between p-5 md:p-6 text-left bg-white hover:bg-purple-50/50 transition-colors"
               >
-                <span className="font-bold text-[#1B5E20] text-sm md:text-base pr-4">
+                <span className="font-bold text-[#2B1B4E] text-sm md:text-base pr-4">
                   {faq.question}
                 </span>
                 <div className="flex-shrink-0">
                   {openIndex === index ? (
-                    <Minus className="w-5 h-5 text-[#4CAF50]" />
+                    <Minus className="w-5 h-5 text-[#9B6DC9]" />
                   ) : (
-                    <Plus className="w-5 h-5 text-[#1B5E20]" />
+                    <Plus className="w-5 h-5 text-[#2B1B4E]" />
                   )}
                 </div>
               </button>
@@ -70,7 +94,7 @@ export function FAQs() {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 md:px-6 pb-5 md:pb-6 text-[#1B5E20]/70 text-sm leading-relaxed">
+                    <div className="px-5 md:px-6 pb-5 md:pb-6 text-[#2B1B4E]/70 text-sm leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>

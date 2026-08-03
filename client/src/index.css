@@ -40,38 +40,38 @@
 }
 
 :root {
-  /* Brand Colors - Green Theme (substituir pela paleta da marca) */
-  --background: 122 39% 25%;     /* #1B5E20 - Dark Green */
+  /* Brand Colors - Mystic Purple & Gold Theme (SKY TERAPIA'S) */
+  --background: 259 49% 21%;     /* #2B1B4E - Deep Night Purple */
   --foreground: 210 40% 98%;     /* Light text */
 
   --card: 0 0% 100%;
-  --card-foreground: 122 39% 20%;
+  --card-foreground: 259 49% 18%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 122 39% 20%;
+  --popover-foreground: 259 49% 18%;
 
-  --primary: 122 39% 49%;        /* #4CAF50 - Bright Green */
+  --primary: 270 46% 61%;        /* #9B6DC9 - Amethyst */
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 88 50% 67%;       /* #8BC34A - Light Lime Green */
-  --secondary-foreground: 122 39% 20%;
+  --secondary: 40 77% 61%;       /* #E8B54D - Warm Gold */
+  --secondary-foreground: 259 49% 18%;
 
-  --muted: 120 15% 95%;
-  --muted-foreground: 120 10% 46%;
+  --muted: 265 20% 96%;
+  --muted-foreground: 265 10% 46%;
 
-  --accent: 122 30% 94%;         /* Very light green for backgrounds */
-  --accent-foreground: 122 39% 49%;
+  --accent: 270 40% 95%;         /* Very light lavender for backgrounds */
+  --accent-foreground: 270 46% 61%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 120 15% 91%;
-  --input: 120 15% 91%;
-  --ring: 122 39% 49%;
+  --border: 265 20% 91%;
+  --input: 265 20% 91%;
+  --ring: 270 46% 61%;
 
-  --chart-1: 122 39% 49%;
-  --chart-2: 88 50% 53%;
-  --chart-3: 122 39% 25%;
+  --chart-1: 270 46% 61%;
+  --chart-2: 40 77% 61%;
+  --chart-3: 259 49% 21%;
   --chart-4: 43 74% 66%;
   --chart-5: 27 87% 67%;
 
@@ -79,36 +79,36 @@
 }
 
 .dark {
-  --background: 122 39% 10%;
+  --background: 259 49% 8%;
   --foreground: 210 40% 98%;
 
-  --card: 122 39% 10%;
+  --card: 259 49% 8%;
   --card-foreground: 210 40% 98%;
 
-  --popover: 122 39% 10%;
+  --popover: 259 49% 8%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 122 39% 49%;
-  --primary-foreground: 122 39% 5%;
+  --primary: 270 46% 61%;
+  --primary-foreground: 259 49% 5%;
 
-  --secondary: 122 25% 20%;
+  --secondary: 265 30% 20%;
   --secondary-foreground: 210 40% 98%;
 
-  --muted: 122 25% 20%;
-  --muted-foreground: 120 15% 65%;
+  --muted: 265 30% 20%;
+  --muted-foreground: 265 15% 65%;
 
-  --accent: 122 25% 20%;
+  --accent: 265 30% 20%;
   --accent-foreground: 210 40% 98%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 122 25% 20%;
-  --input: 122 25% 20%;
-  --ring: 122 39% 49%;
+  --border: 265 30% 20%;
+  --input: 265 30% 20%;
+  --ring: 270 46% 61%;
 
-  --chart-1: 122 50% 50%;
-  --chart-2: 88 50% 53%;
+  --chart-1: 270 50% 60%;
+  --chart-2: 40 77% 61%;
   --chart-3: 30 80% 55%;
   --chart-4: 280 65% 60%;
   --chart-5: 340 75% 55%;

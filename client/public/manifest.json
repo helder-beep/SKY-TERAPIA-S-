@@ -1,11 +1,11 @@
 {
-  "name": "[Nome do Site]",
-  "short_name": "[Nome Curto]",
-  "description": "[Descrição curta do site/negócio]",
+  "name": "SKY TERAPIA'S",
+  "short_name": "Sky Terapia's",
+  "description": "Tarot, Reiki e Terapias Holísticas em Santarém",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1B5E20",
+  "theme_color": "#2B1B4E",
   "icons": [
     {
       "src": "/icon-192.png",

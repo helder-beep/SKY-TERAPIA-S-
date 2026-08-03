@@ -16,18 +16,12 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: "projeto-1", title: "[Título do Projeto 1]", location: "[Localidade 1]", description: "[Descrição curta do projeto 1.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]"] },
-  { id: "projeto-2", title: "[Título do Projeto 2]", location: "[Localidade 2]", description: "[Descrição curta do projeto 2.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]"] },
-  { id: "projeto-3", title: "[Título do Projeto 3]", location: "[Localidade 3]", description: "[Descrição curta do projeto 3.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]", "[Foto 6]", "[Foto 7]", "[Foto 8]", "[Foto 9]", "[Foto 10]", "[Foto 11]", "[Foto 12]"] },
-  { id: "projeto-4", title: "[Título do Projeto 4]", location: "[Localidade 4]", description: "[Descrição curta do projeto 4.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]", "[Foto 6]", "[Foto 7]"] },
-  { id: "projeto-5", title: "[Título do Projeto 5]", location: "[Localidade 5]", description: "[Descrição curta do projeto 5.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]", "[Foto 6]", "[Foto 7]", "[Foto 8]"] },
-  { id: "projeto-6", title: "[Título do Projeto 6]", location: "[Localidade 6]", description: "[Descrição curta do projeto 6.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]"] },
-  { id: "projeto-7", title: "[Título do Projeto 7]", location: "[Localidade 7]", description: "[Descrição curta do projeto 7.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]"] },
-  { id: "projeto-8", title: "[Título do Projeto 8]", location: "[Localidade 8]", description: "[Descrição curta do projeto 8.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]", "[Foto 6]", "[Foto 7]"] },
-  { id: "projeto-9", title: "[Título do Projeto 9]", location: "[Localidade 9]", description: "[Descrição curta do projeto 9.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]", "[Foto 6]", "[Foto 7]", "[Foto 8]", "[Foto 9]", "[Foto 10]", "[Foto 11]", "[Foto 12]", "[Foto 13]", "[Foto 14]"] },
-  { id: "projeto-10", title: "[Título do Projeto 10]", location: "[Localidade 10]", description: "[Descrição curta do projeto 10.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]", "[Foto 6]", "[Foto 7]", "[Foto 8]", "[Foto 9]", "[Foto 10]", "[Foto 11]", "[Foto 12]"] },
-  { id: "projeto-11", title: "[Título do Projeto 11]", location: "[Localidade 11]", description: "[Descrição curta do projeto 11.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]", "[Foto 6]", "[Foto 7]", "[Foto 8]", "[Foto 9]"] },
-  { id: "projeto-12", title: "[Título do Projeto 12]", location: "[Localidade 12]", description: "[Descrição curta do projeto 12.]", images: ["[Foto 1]", "[Foto 2]", "[Foto 3]", "[Foto 4]", "[Foto 5]", "[Foto 6]", "[Foto 7]", "[Foto 8]", "[Foto 9]"] }
+  { id: "sala-atendimento", title: "Sala de Atendimento", location: "Santarém", description: "O espaço reservado onde decorrem as sessões individuais, pensado para o teu conforto e privacidade.", images: ["[Foto: Sala de Atendimento 1]", "[Foto: Sala de Atendimento 2]", "[Foto: Sala de Atendimento 3]", "[Foto: Sala de Atendimento 4]"] },
+  { id: "tarot-cigano", title: "Cantinho do Tarot", location: "Santarém", description: "Baralhos de tarot cigano e tarot intuitivo usados nas sessões de orientação.", images: ["[Foto: Tarot 1]", "[Foto: Tarot 2]", "[Foto: Tarot 3]"] },
+  { id: "reiki-energia", title: "Sessão de Reiki", location: "Santarém", description: "Momentos de cura energética e reequilíbrio através do Reiki.", images: ["[Foto: Reiki 1]", "[Foto: Reiki 2]", "[Foto: Reiki 3]"] },
+  { id: "cristais-cromoterapia", title: "Cristais & Cromoterapia", location: "Santarém", description: "Cristais e ferramentas utilizados nas sessões de cromoterapia e limpeza energética.", images: ["[Foto: Cristais 1]", "[Foto: Cristais 2]", "[Foto: Cristais 3]"] },
+  { id: "defumacoes", title: "Ritual de Defumação", location: "Santarém", description: "Defumações de habitação e negócios para limpeza e renovação energética.", images: ["[Foto: Defumação 1]", "[Foto: Defumação 2]"] },
+  { id: "cursos-feiras", title: "Cursos & Feiras", location: "Vários locais", description: "Momentos de partilha em cursos, workshops e feiras esotéricas por todo o país.", images: ["[Foto: Curso 1]", "[Foto: Feira 1]", "[Foto: Workshop 1]"] }
 ];
 
 export default function Portfolio() {
@@ -50,18 +44,18 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#1B5E20] font-sans">
+    <div className="min-h-screen bg-white text-[#2B1B4E] font-sans">
       <Navbar />
       <main className="pt-20">
         {/* Banner Hero */}
-        <section className="relative h-[25vh] md:h-[30vh] overflow-hidden flex items-center bg-[#1B5E20]">
+        <section className="relative h-[25vh] md:h-[30vh] overflow-hidden flex items-center bg-[#2B1B4E]">
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <h1 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tight">
-                Os nossos <span className="text-[#4CAF50] lowercase italic font-display">projetos</span>
+                O nosso <span className="text-[#9B6DC9] lowercase italic font-display">espaço</span>
               </h1>
               <p className="text-white/70 mt-4 text-sm md:text-lg max-w-2xl mx-auto">
-                Explore as transformações reais que realizámos para os nossos clientes
+                Conhece o ambiente acolhedor e reservado onde acontecem as sessões
               </p>
             </motion.div>
           </div>
@@ -92,17 +86,17 @@ export default function Portfolio() {
                       className="w-full h-full"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center">
-                      <Button className="opacity-0 group-hover:opacity-100 bg-white text-[#1B5E20] font-black uppercase tracking-widest pointer-events-none translate-y-4 group-hover:translate-y-0 transition-all">
+                      <Button className="opacity-0 group-hover:opacity-100 bg-white text-[#2B1B4E] font-black uppercase tracking-widest pointer-events-none translate-y-4 group-hover:translate-y-0 transition-all">
                         Ver Galeria ({project.images.length})
                       </Button>
                     </div>
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-center gap-3">
-                      <span className="text-[#4CAF50] text-xs font-black uppercase tracking-widest">{project.location}</span>
+                      <span className="text-[#9B6DC9] text-xs font-black uppercase tracking-widest">{project.location}</span>
                       <div className="h-px flex-1 bg-slate-100" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight group-hover:text-[#4CAF50] transition-colors">{project.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight group-hover:text-[#9B6DC9] transition-colors">{project.title}</h3>
                     <p className="text-slate-600 text-sm md:text-base leading-relaxed line-clamp-2 italic font-display">
                       {project.description}
                     </p>
@@ -154,7 +148,7 @@ export default function Portfolio() {
                     <button
                       key={idx}
                       onClick={() => setSelectedImageIndex(idx)}
-                      className={`relative w-16 h-16 rounded-sm overflow-hidden flex-shrink-0 transition-all ${selectedImageIndex === idx ? 'ring-2 ring-[#4CAF50] scale-105' : 'opacity-40 hover:opacity-100'}`}
+                      className={`relative w-16 h-16 rounded-sm overflow-hidden flex-shrink-0 transition-all ${selectedImageIndex === idx ? 'ring-2 ring-[#9B6DC9] scale-105' : 'opacity-40 hover:opacity-100'}`}
                     >
                       <ImagePlaceholder label={img} width={64} height={64} className="w-full h-full" />
                     </button>
@@ -162,8 +156,8 @@ export default function Portfolio() {
                 </div>
 
                 <Link href="/orcamento">
-                  <Button className="mt-8 bg-[#4CAF50] hover:bg-[#388E3C] text-white font-black uppercase tracking-widest px-8 h-14">
-                    Orçamento para Projeto Semelhante
+                  <Button className="mt-8 bg-[#9B6DC9] hover:bg-[#7C4DA8] text-white font-black uppercase tracking-widest px-8 h-14">
+                    Marcar a Minha Sessão
                   </Button>
                 </Link>
               </div>

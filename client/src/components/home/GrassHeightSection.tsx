@@ -6,43 +6,43 @@ import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 const heights = [
   {
     id: "info",
-    label: "[OPÇÃO 1]",
-    title: "[Título da secção]",
+    label: "VISÃO GERAL",
+    title: "Qual sessão escolher?",
     isOverview: true,
-    description: "[Texto introdutório explicando como escolher entre as opções abaixo.]",
+    description: "Cada pessoa chega até mim numa fase diferente. Aqui fica um guia rápido para escolheres a sessão mais adequada ao que precisas agora.",
     points: [
-      { label: "[Opção A]", text: "[explicação curta sobre quando usar a opção A.]" },
-      { label: "[Opção B]", text: "[explicação curta sobre quando usar a opção B.]" },
-      { label: "[Opção C]", text: "[explicação curta sobre quando usar a opção C.]" }
+      { label: "Tarot Cigano", text: "ideal para quem procura orientação rápida sobre uma dúvida concreta — amor, trabalho ou decisões do dia a dia." },
+      { label: "Vidas Passadas", text: "indicado para quem sente padrões repetitivos ou bloqueios que parecem não ter origem no presente." },
+      { label: "Reiki / Psicoterapia", text: "recomendado para um acompanhamento mais profundo, focado em equilíbrio emocional e energético contínuo." }
     ],
-    image: "[Imagem de visão geral]"
+    image: "[Imagem de visão geral: mesa de tarot com velas]"
   },
   {
     id: "short",
-    label: "[OPÇÃO A]",
-    title: "[Título da secção]",
-    description: "[Descrição curta da opção A.]",
-    details: "[Texto detalhado sobre a opção A, explicando características e vantagens.]",
-    recommended: "[lista de casos de uso recomendados para a opção A.]",
-    image: "[Imagem da opção A]"
+    label: "TAROT CIGANO",
+    title: "Orientação Rápida",
+    description: "Uma leitura de tarot cigano focada numa questão específica.",
+    details: "Perfeita para quem precisa de clareza imediata sobre uma situação — uma decisão a tomar, uma dúvida no amor ou no trabalho. A sessão é direta, intuitiva e feita com total sigilo.",
+    recommended: "dúvidas pontuais, decisões urgentes, orientação sobre amor e trabalho.",
+    image: "[Imagem: leitura de tarot cigano]"
   },
   {
     id: "medium",
-    label: "[OPÇÃO B]",
-    title: "[Título da secção]",
-    description: "[Descrição curta da opção B.]",
-    details: "[Texto detalhado sobre a opção B, explicando características e vantagens.]",
-    recommended: "[lista de casos de uso recomendados para a opção B.]",
-    image: "[Imagem da opção B]"
+    label: "VIDAS PASSADAS",
+    title: "Terapia Profunda",
+    description: "Uma sessão de regressão para trabalhar bloqueios emocionais mais enraizados.",
+    details: "Através da terapia de vidas passadas, exploramos a origem de medos, padrões e bloqueios que se repetem na tua vida atual, promovendo libertação e compreensão.",
+    recommended: "padrões repetitivos, medos sem explicação aparente, bloqueios emocionais antigos.",
+    image: "[Imagem: sessão de regressão]"
   },
   {
     id: "high",
-    label: "[OPÇÃO C]",
-    title: "[Título da secção]",
-    description: "[Descrição curta da opção C.]",
-    details: "[Texto detalhado sobre a opção C, explicando características e vantagens.]",
-    recommended: "[lista de casos de uso recomendados para a opção C.]",
-    image: "[Imagem da opção C]"
+    label: "REIKI & PSICOTERAPIA",
+    title: "Acompanhamento Contínuo",
+    description: "Um percurso de várias sessões para trabalhar o teu equilíbrio a longo prazo.",
+    details: "Combinando Reiki, psicoterapia holística e outras técnicas energéticas, construímos um acompanhamento contínuo, adaptado à tua evolução e às tuas necessidades ao longo do tempo.",
+    recommended: "ansiedade, transições de vida, quem procura um acompanhamento regular.",
+    image: "[Imagem: sessão de Reiki]"
   }
 ];
 
@@ -55,11 +55,11 @@ export function GrassHeightSection() {
         {/* Header matching screenshot */}
         <div className="relative mb-8">
           <div className="text-center mb-4">
-            <h2 className="text-xl md:text-3xl font-black uppercase tracking-tight text-[#1B5E20]">
-              [Título da <span className="font-display italic normal-case font-normal text-[#4CAF50] lowercase tracking-normal">secção]</span>
+            <h2 className="text-xl md:text-3xl font-black uppercase tracking-tight text-[#2B1B4E]">
+              Encontra a <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal">tua sessão</span>
             </h2>
           </div>
-          <div className="w-full h-[2px] bg-[#1B5E20]"></div>
+          <div className="w-full h-[2px] bg-[#2B1B4E]"></div>
         </div>
 
         {/* Navigation Tabs matching screenshot */}
@@ -71,7 +71,7 @@ export function GrassHeightSection() {
               className={cn(
                 "text-[10px] md:text-xs font-black uppercase tracking-widest py-2 transition-all relative",
                 activeTab.id === h.id 
-                  ? "text-[#1B5E20]" 
+                  ? "text-[#2B1B4E]" 
                   : "text-slate-400 hover:text-slate-600"
               )}
             >
@@ -79,7 +79,7 @@ export function GrassHeightSection() {
               {activeTab.id === h.id && (
                 <motion.div 
                   layoutId="activeTabUnderline"
-                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#1B5E20]"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#2B1B4E]"
                 />
               )}
             </button>
@@ -121,7 +121,7 @@ export function GrassHeightSection() {
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
               >
-                <p className="text-[#1B5E20]/70 text-sm md:text-base leading-relaxed font-medium">
+                <p className="text-[#2B1B4E]/70 text-sm md:text-base leading-relaxed font-medium">
                   {activeTab.description}
                 </p>
 
@@ -129,23 +129,23 @@ export function GrassHeightSection() {
                   <ul className="space-y-6">
                     {activeTab.points?.map((point, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="text-[#4CAF50] mt-1.5 font-black">•</span>
-                        <p className="text-[#1B5E20]/80 text-sm md:text-base leading-relaxed">
-                          <span className="font-black uppercase text-xs tracking-tighter text-[#1B5E20]">{point.label}:</span> {point.text}
+                        <span className="text-[#9B6DC9] mt-1.5 font-black">•</span>
+                        <p className="text-[#2B1B4E]/80 text-sm md:text-base leading-relaxed">
+                          <span className="font-black uppercase text-xs tracking-tighter text-[#2B1B4E]">{point.label}:</span> {point.text}
                         </p>
                       </li>
                     ))}
                   </ul>
                 ) : (
                   <>
-                    <p className="text-[#1B5E20]/80 text-sm md:text-base leading-relaxed">
+                    <p className="text-[#2B1B4E]/80 text-sm md:text-base leading-relaxed">
                       {activeTab.details}
                     </p>
-                    <div className="pt-4 border-l-2 border-[#4CAF50] pl-4">
-                      <p className="text-[#1B5E20] text-sm md:text-base font-black uppercase tracking-widest mb-1">
+                    <div className="pt-4 border-l-2 border-[#9B6DC9] pl-4">
+                      <p className="text-[#2B1B4E] text-sm md:text-base font-black uppercase tracking-widest mb-1">
                         Recomendados especialmente para:
                       </p>
-                      <p className="text-[#1B5E20]/70 font-medium italic lowercase">
+                      <p className="text-[#2B1B4E]/70 font-medium italic lowercase">
                         {activeTab.recommended}
                       </p>
                     </div>
@@ -156,9 +156,9 @@ export function GrassHeightSection() {
                 <div className="pt-10 flex justify-center lg:justify-start">
                   <button 
                     onClick={() => window.location.href = "/orcamento"}
-                    className="bg-[#1B5E20] hover:bg-[#4CAF50] text-white font-black uppercase tracking-[0.2em] px-10 py-5 rounded-sm shadow-xl transition-all hover:scale-105 text-xs md:text-sm"
+                    className="bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black uppercase tracking-[0.2em] px-10 py-5 rounded-sm shadow-xl transition-all hover:scale-105 text-xs md:text-sm"
                   >
-                    {activeTab.isOverview ? "QUE ALTURA ESCOLHER?" : "PEDIR ORÇAMENTO"}
+                    {activeTab.isOverview ? "QUAL SESSÃO ESCOLHER?" : "MARCAR ESTA SESSÃO"}
                   </button>
                 </div>
               </motion.div>

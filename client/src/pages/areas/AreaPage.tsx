@@ -6,40 +6,40 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Phone, ArrowRight, CheckCircle } from "lucide-react";
 
 const areasData: Record<string, { name: string; description: string; neighborhoods: string[] }> = {
-  "area-1": {
-    name: "[Área 1]",
-    description: "[Descrição da cobertura de serviço na área 1, incluindo as zonas cobertas.]",
-    neighborhoods: ["[Zona 1]", "[Zona 2]", "[Zona 3]", "[Zona 4]", "[Zona 5]", "[Zona 6]", "[Zona 7]", "[Zona 8]", "[Zona 9]"]
+  "santarem": {
+    name: "Santarém",
+    description: "Atendimento presencial em Santarém, num espaço reservado e acolhedor, para tarot, reiki, terapia de vidas passadas e restantes terapias holísticas.",
+    neighborhoods: ["Santarém Centro", "Marvila", "Alfange", "Vaqueiros", "Pombalinho", "Abitureiras", "Alcanhões", "Achete"]
   },
-  "area-2": {
-    name: "[Área 2]",
-    description: "[Descrição da cobertura de serviço na área 2, incluindo as zonas cobertas.]",
-    neighborhoods: ["[Zona 1]", "[Zona 2]", "[Zona 3]", "[Zona 4]", "[Zona 5]", "[Zona 6]", "[Zona 7]", "[Zona 8]"]
+  "cartaxo": {
+    name: "Cartaxo",
+    description: "Sessões de terapias holísticas disponíveis para clientes do Cartaxo, presencialmente em Santarém ou por marcação especial.",
+    neighborhoods: ["Cartaxo Centro", "Vale da Pinta", "Pontével", "Vale da Pedra", "Ereira"]
   },
-  "area-3": {
-    name: "[Área 3]",
-    description: "[Descrição da cobertura de serviço na área 3, incluindo as zonas cobertas.]",
-    neighborhoods: ["[Zona 1]", "[Zona 2]", "[Zona 3]", "[Zona 4]", "[Zona 5]", "[Zona 6]", "[Zona 7]"]
+  "almeirim": {
+    name: "Almeirim",
+    description: "Clientes de Almeirim podem marcar sessões presenciais em Santarém ou optar por consultas online de tarot e mesa radiónica.",
+    neighborhoods: ["Almeirim Centro", "Fazendas de Almeirim", "Benfica do Ribatejo", "Raposa"]
   },
-  "area-4": {
-    name: "[Área 4]",
-    description: "[Descrição da cobertura de serviço na área 4, incluindo as zonas cobertas.]",
-    neighborhoods: ["[Zona 1]", "[Zona 2]", "[Zona 3]", "[Zona 4]", "[Zona 5]", "[Zona 6]", "[Zona 7]", "[Zona 8]"]
+  "tomar": {
+    name: "Tomar",
+    description: "Para quem vive em Tomar, disponibilizo sessões online e, mediante marcação, atendimento presencial em Santarém.",
+    neighborhoods: ["Tomar Centro", "Casais", "São João Baptista", "Serra"]
   },
-  "area-5": {
-    name: "[Área 5]",
-    description: "[Descrição da cobertura de serviço na área 5, incluindo as zonas cobertas.]",
-    neighborhoods: ["[Zona 1]", "[Zona 2]", "[Zona 3]", "[Zona 4]", "[Zona 5]", "[Zona 6]"]
+  "torres-novas": {
+    name: "Torres Novas",
+    description: "Clientes de Torres Novas contam com sessões online ou atendimento presencial em Santarém, consoante a terapia escolhida.",
+    neighborhoods: ["Torres Novas Centro", "Riachos", "Zibreira", "Meia Via"]
   },
-  "area-6": {
-    name: "[Área 6]",
-    description: "[Descrição da cobertura de serviço na área 6, incluindo as zonas cobertas.]",
-    neighborhoods: ["[Zona 1]", "[Zona 2]", "[Zona 3]", "[Zona 4]", "[Zona 5]", "[Zona 6]"]
+  "online": {
+    name: "Consultas Online",
+    description: "Tarot, mesa radiónica e outras sessões que não exigem contacto físico estão disponíveis online para qualquer parte de Portugal.",
+    neighborhoods: ["Todo o País", "Vídeo-Chamada", "Chamada Telefónica", "WhatsApp"]
   },
   "todas-as-areas": {
-    name: "[Toda a Região]",
-    description: "[Descrição geral de toda a área de atuação, usada na página de resumo de áreas de serviço.]",
-    neighborhoods: ["[Área 1]", "[Área 2]", "[Área 3]", "[Área 4]", "[Área 5]", "[Área 6]"]
+    name: "Toda a Região",
+    description: "Atendimento presencial em Santarém e arredores, com sessões online disponíveis para clientes em qualquer parte do país.",
+    neighborhoods: ["Santarém", "Cartaxo", "Almeirim", "Tomar", "Torres Novas", "Consultas Online"]
   }
 };
 
@@ -55,7 +55,7 @@ export default function AreaPage() {
       <div className="min-h-screen bg-white">
         <Navbar />
         <div className="pt-32 text-center">
-          <h2 className="text-2xl font-bold text-[#1B5E20]">Área não encontrada</h2>
+          <h2 className="text-2xl font-bold text-[#2B1B4E]">Área não encontrada</h2>
           <Link href="/">
             <Button className="mt-4">Voltar ao Início</Button>
           </Link>
@@ -66,12 +66,12 @@ export default function AreaPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-[#1B5E20] font-sans">
+    <div className="min-h-screen bg-white text-[#2B1B4E] font-sans">
       <Navbar />
       <main className="pt-20">
         {/* Banner Hero */}
         <section className="relative h-[25vh] md:h-[30vh] min-h-[180px] overflow-hidden flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1B5E20] to-[#2E7D32]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#2B1B4E] to-[#3D2766]" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M30%200L60%2030L30%2060L0%2030z%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3C%2Fsvg%3E')]" />
           <div className="container mx-auto px-4 md:px-8 xl:px-12 max-w-[1400px] relative z-10 text-center">
             <motion.div
@@ -80,13 +80,13 @@ export default function AreaPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center justify-center gap-2 mb-4">
-                <MapPin className="w-5 h-5 text-[#8BC34A]" />
-                <span className="text-[#8BC34A] text-xs font-black uppercase tracking-[0.3em]">
+                <MapPin className="w-5 h-5 text-[#E8B54D]" />
+                <span className="text-[#E8B54D] text-xs font-black uppercase tracking-[0.3em]">
                   Área de Serviço
                 </span>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-none">
-                [Serviços em] <span className="text-[#8BC34A]">{area.name}</span>
+                Terapias em <span className="text-[#E8B54D]">{area.name}</span>
               </h1>
             </motion.div>
           </div>
@@ -103,23 +103,23 @@ export default function AreaPage() {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <h2 className="text-3xl md:text-4xl font-black text-[#1B5E20] uppercase tracking-tight">
-                  [Título do Serviço] em {area.name}
+                <h2 className="text-3xl md:text-4xl font-black text-[#2B1B4E] uppercase tracking-tight">
+                  Terapias Holísticas em {area.name}
                 </h2>
-                <p className="text-[#1B5E20]/70 text-base md:text-lg leading-relaxed">
+                <p className="text-[#2B1B4E]/70 text-base md:text-lg leading-relaxed">
                   {area.description}
                 </p>
-                <p className="text-[#1B5E20]/70 text-base md:text-lg leading-relaxed">
-                  [Texto adicional sobre a empresa e a sua atuação em {area.name}, incluindo garantias e diferenciais.]
+                <p className="text-[#2B1B4E]/70 text-base md:text-lg leading-relaxed">
+                  Com formação certificada pela DGERT e mais de 4 anos de experiência, garanto sempre total sigilo e um acompanhamento próximo, adaptado a ti.
                 </p>
 
                 <div className="space-y-4 pt-4">
-                  <h3 className="text-lg font-black text-[#1B5E20] uppercase">Os nossos serviços em {area.name}:</h3>
+                  <h3 className="text-lg font-black text-[#2B1B4E] uppercase">As nossas terapias em {area.name}:</h3>
                   <div className="space-y-3">
-                    {["[Serviço 1]", "[Serviço 2]", "[Serviço 3]", "[Serviço 4]"].map((service, i) => (
+                    {["Tarot Cigano Intuitivo", "Terapia de Vidas Passadas", "Reiki & Cura Energética", "Psicoterapia Holística"].map((service, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-[#4CAF50] flex-shrink-0" />
-                        <span className="text-[#1B5E20] font-medium">{service}</span>
+                        <CheckCircle className="w-5 h-5 text-[#9B6DC9] flex-shrink-0" />
+                        <span className="text-[#2B1B4E] font-medium">{service}</span>
                       </div>
                     ))}
                   </div>
@@ -127,13 +127,13 @@ export default function AreaPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
                   <Link href="/orcamento">
-                    <Button className="bg-[#1B5E20] hover:bg-[#4CAF50] text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm shadow-lg">
-                      Pedir Orçamento Grátis
+                    <Button className="bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm shadow-lg">
+                      Marcar Consulta Grátis
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
                   <a href="tel:+000000000">
-                    <Button variant="outline" className="border-2 border-[#1B5E20] text-[#1B5E20] hover:bg-[#1B5E20] hover:text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm">
+                    <Button variant="outline" className="border-2 border-[#2B1B4E] text-[#2B1B4E] hover:bg-[#2B1B4E] hover:text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm">
                       <Phone className="w-5 h-5 mr-2" />
                       Ligar Agora
                     </Button>
@@ -146,7 +146,7 @@ export default function AreaPage() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-[#1B5E20] to-[#2E7D32] p-8 md:p-10 rounded-lg"
+                className="bg-gradient-to-br from-[#2B1B4E] to-[#3D2766] p-8 md:p-10 rounded-lg"
               >
                 <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-6">
                   Zonas que servimos em {area.name}
@@ -154,7 +154,7 @@ export default function AreaPage() {
                 <div className="grid grid-cols-2 gap-3">
                   {area.neighborhoods.map((neighborhood, i) => (
                     <div key={i} className="flex items-center gap-2 text-white/90">
-                      <MapPin className="w-4 h-4 text-[#8BC34A] flex-shrink-0" />
+                      <MapPin className="w-4 h-4 text-[#E8B54D] flex-shrink-0" />
                       <span className="text-sm font-medium">{neighborhood}</span>
                     </div>
                   ))}

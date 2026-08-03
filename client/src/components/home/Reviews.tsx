@@ -3,22 +3,20 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// ⚠️ Testemunhos de exemplo — substituir por avaliações reais de clientes antes de publicar o site.
 const reviews = [
-  { name: "[Nome do Cliente 1]", role: "Cliente", content: "[Testemunho do cliente 1 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 2]", role: "Cliente", content: "[Testemunho do cliente 2 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 3]", role: "Cliente", content: "[Testemunho do cliente 3 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 4]", role: "Cliente", content: "[Testemunho do cliente 4 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 5]", role: "Cliente", content: "[Testemunho do cliente 5 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 6]", role: "Cliente", content: "[Testemunho do cliente 6 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 7]", role: "Cliente", content: "[Testemunho do cliente 7 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 8]", role: "Cliente", content: "[Testemunho do cliente 8 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 9]", role: "Cliente", content: "[Testemunho do cliente 9 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 10]", role: "Cliente", content: "[Testemunho do cliente 10 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 },
-  { name: "[Nome do Cliente 11]", role: "Cliente", content: "[Testemunho do cliente 11 — uma ou duas frases sobre a experiência com o serviço.]", rating: 5 }
+  { name: "[Cliente de Santarém]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a sessão de tarot.]", rating: 5 },
+  { name: "[Cliente de Cartaxo]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a sessão de Reiki.]", rating: 5 },
+  { name: "[Cliente Online]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a terapia de vidas passadas.]", rating: 5 },
+  { name: "[Cliente de Tomar]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a psicoterapia.]", rating: 5 },
+  { name: "[Cliente de Almeirim]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre uma defumação.]", rating: 5 },
+  { name: "[Cliente de Torres Novas]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a cromoterapia.]", rating: 5 },
+  { name: "[Cliente de Santarém]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a mesa radiónica.]", rating: 5 },
+  { name: "[Cliente de um Curso]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um participante num workshop.]", rating: 5 }
 ];
 
 const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
-  <div className="w-[280px] md:w-[380px] min-h-[160px] md:min-h-[180px] bg-white p-6 md:p-7 rounded-[4px] border border-[#1B5E20]/10 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] transition-all duration-300 group relative flex flex-col hover:-translate-y-2 mx-2 md:mx-4 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] cursor-default">
+  <div className="w-[280px] md:w-[380px] min-h-[160px] md:min-h-[180px] bg-white p-6 md:p-7 rounded-[4px] border border-[#2B1B4E]/10 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] transition-all duration-300 group relative flex flex-col hover:-translate-y-2 mx-2 md:mx-4 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] cursor-default">
     <div className="absolute top-4 right-4 md:top-5 md:right-5">
       <svg className="w-4 h-4 md:w-6 md:h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -34,12 +32,12 @@ const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
       ))}
     </div>
     
-    <p className="text-[#1B5E20] text-xs md:text-[15px] leading-relaxed mb-4 md:mb-5 flex-grow font-bold italic line-clamp-4 md:line-clamp-4">
+    <p className="text-[#2B1B4E] text-xs md:text-[15px] leading-relaxed mb-4 md:mb-5 flex-grow font-bold italic line-clamp-4 md:line-clamp-4">
       "{review.content}"
     </p>
     
     <div className="flex items-center pt-4 md:pt-5 border-t border-slate-100 mt-auto">
-      <h4 className="font-black uppercase tracking-tighter text-[#1B5E20] text-[10px] md:text-[13px] truncate w-full">{review.name}</h4>
+      <h4 className="font-black uppercase tracking-tighter text-[#2B1B4E] text-[10px] md:text-[13px] truncate w-full">{review.name}</h4>
     </div>
   </div>
 );
@@ -57,11 +55,11 @@ export function Reviews() {
       <div className="w-full relative py-14 md:py-24 bg-white">
         <div className="relative w-full z-10">
           <div className="container mx-auto px-6 md:px-8 xl:px-12 max-w-[1400px] mb-8 md:mb-12 text-center">
-            <div className="inline-block bg-[#1B5E20] text-white px-4 py-1 mb-4 md:mb-6">
+            <div className="inline-block bg-[#2B1B4E] text-white px-4 py-1 mb-4 md:mb-6">
               <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">Depoimentos</span>
             </div>
-            <h3 className="text-[1.5rem] md:text-5xl font-black text-[#1B5E20] uppercase tracking-tighter leading-tight mb-4">
-              [O que dizem os <span className="font-display italic normal-case font-normal text-[#4CAF50] lowercase tracking-normal">nossos clientes]</span>
+            <h3 className="text-[1.5rem] md:text-5xl font-black text-[#2B1B4E] uppercase tracking-tighter leading-tight mb-4">
+              O que dizem os <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal">nossos clientes</span>
             </h3>
           </div>
 
@@ -110,7 +108,7 @@ export function Reviews() {
         <div className="flex justify-center mt-12 relative z-10">
           <Button 
             onClick={() => window.open("https://search.google.com/local/writereview?placeid=SUBSTITUIR_PLACE_ID", "_blank")}
-            className="rounded-sm bg-[#1B5E20] text-white hover:bg-[#4CAF50] px-8 h-12 text-xs font-black tracking-widest uppercase transition-all shadow-lg border border-white/20"
+            className="rounded-sm bg-[#2B1B4E] text-white hover:bg-[#9B6DC9] px-8 h-12 text-xs font-black tracking-widest uppercase transition-all shadow-lg border border-white/20"
           >
             Deixar Avaliação no Google
           </Button>

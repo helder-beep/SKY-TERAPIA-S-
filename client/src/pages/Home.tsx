@@ -36,7 +36,7 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen font-sans selection:bg-green-500/30 bg-white">
+    <div className="relative min-h-screen font-sans selection:bg-purple-500/30 bg-white">
       <Navbar />
       
       {/* HERO SECTION */}
@@ -49,16 +49,16 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 xl:px-12 max-w-[1400px]">
           <div className="grid grid-cols-3 gap-3 md:gap-8 items-center text-center">
             {[
-              { value: 5, label: "Anos de experiência", suffix: "+" },
-              { value: 100, label: "Projectos concluídos", suffix: "+" },
-              { value: 100, label: "Satisfação garantida", suffix: "%" }
+              { value: 4, label: "Anos de experiência", suffix: "+" },
+              { value: 8, label: "Terapias diferentes", suffix: "" },
+              { value: 100, label: "Sigilo garantido", suffix: "%" }
             ].map((stat, idx) => (
               <div key={idx} className="flex flex-col items-center justify-center gap-2 md:gap-4 group">
-                <motion.span className="text-2xl md:text-6xl font-black text-[#1B5E20] leading-none tracking-tighter">
+                <motion.span className="text-2xl md:text-6xl font-black text-[#2B1B4E] leading-none tracking-tighter">
                   <Counter value={stat.value} suffix={stat.suffix} />
                 </motion.span>
                 <div className="flex flex-col">
-                  <span className="text-[#1B5E20] text-[9px] md:text-xs font-black uppercase tracking-tight leading-tight max-w-[70px] md:max-w-[120px]">
+                  <span className="text-[#2B1B4E] text-[9px] md:text-xs font-black uppercase tracking-tight leading-tight max-w-[70px] md:max-w-[120px]">
                     {stat.label}
                   </span>
                 </div>

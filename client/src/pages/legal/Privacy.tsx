@@ -13,7 +13,7 @@ export default function Privacy() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl font-black text-[#1B5E20] mb-2 uppercase tracking-tight">
+            <h1 className="text-4xl font-black text-[#2B1B4E] mb-2 uppercase tracking-tight">
               Política de Privacidade
             </h1>
             <p className="text-slate-600 mb-8">Última atualização: 13 de Março de 2026</p>
@@ -21,30 +21,30 @@ export default function Privacy() {
             <div className="prose prose-sm max-w-none text-slate-700 leading-relaxed space-y-6">
               
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">1. Responsável pelos Dados</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">1. Responsável pelos Dados</h2>
                 <p>
-                  <strong>[Nome da Empresa], Lda.</strong><br />
-                  [Morada completa]<br />
+                  <strong>SKY TERAPIA'S</strong><br />
+                  Santarém, Portugal (marcação prévia)<br />
                   NIF: [Inserir NIF]<br />
                   Telefone: [Telefone]<br />
-                  Email: geral@example.com
+                  Email: terapiassky1@gmail.com
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">2. Dados Pessoais Recolhidos</h2>
-                <p>A [Nome da Empresa] recolhe os seguintes dados pessoais:</p>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">2. Dados Pessoais Recolhidos</h2>
+                <p>A SKY TERAPIA'S recolhe os seguintes dados pessoais:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Dados de Contacto:</strong> Nome, email, telefone, morada</li>
-                  <li><strong>Dados de Localização:</strong> Endereço do imóvel para avaliação de orçamento</li>
-                  <li><strong>Dados Comerciais:</strong> Preferências de serviços, histórico de pedidos</li>
+                  <li><strong>Dados de Sessão:</strong> Informação partilhada durante as sessões, tratada com total confidencialidade</li>
+                  <li><strong>Dados Comerciais:</strong> Preferências de terapias, histórico de marcações</li>
                   <li><strong>Dados Técnicos:</strong> Endereço IP, cookies, tipo de navegador</li>
                   <li><strong>Dados Fiscais:</strong> NIF, dados bancários (apenas para faturação autorizada)</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">3. Base Legal da Recolha</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">3. Base Legal da Recolha</h2>
                 <p>Processamos os seus dados com base em:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Consentimento:</strong> Para contactos comerciais (newsletter, promoções)</li>
@@ -55,7 +55,7 @@ export default function Privacy() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">4. Destinatários dos Dados</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">4. Destinatários dos Dados</h2>
                 <p>Os seus dados podem ser partilhados com:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Equipa Interna:</strong> Comercial, técnica e administrativa</li>
@@ -66,7 +66,7 @@ export default function Privacy() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">5. Período de Conservação</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">5. Período de Conservação</h2>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Dados Comerciais:</strong> Durante a relação comercial + 3 anos</li>
                   <li><strong>Dados Fiscais:</strong> 10 anos (obrigação legal)</li>
@@ -76,7 +76,7 @@ export default function Privacy() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">6. Direitos do Titular</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">6. Direitos do Titular</h2>
                 <p>Tem o direito de:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Acesso:</strong> Solicitar cópia dos seus dados</li>
@@ -87,12 +87,12 @@ export default function Privacy() {
                   <li><strong>Restrição:</strong> Limitar processamento de dados</li>
                 </ul>
                 <p className="mt-4">
-                  Para exercer estes direitos, contacte: <strong>privacidade@example.com</strong>
+                  Para exercer estes direitos, contacte: <strong>terapiassky1@gmail.com</strong>
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">7. Segurança de Dados</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">7. Segurança de Dados</h2>
                 <p>
                   Implementamos medidas de segurança técnicas e organizacionais para proteger os seus dados contra:
                 </p>
@@ -105,14 +105,14 @@ export default function Privacy() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">8. Cookies</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">8. Cookies</h2>
                 <p>
                   O website utiliza cookies para analytics e funcionalidade. Ao continuar a navegação, está a consentir o uso de cookies. Pode desativar cookies nas configurações do seu navegador.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">9. Reclamações</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">9. Reclamações</h2>
                 <p>
                   Se considera que o processamento dos seus dados viola os seus direitos, pode apresentar reclamação junto da:
                 </p>
@@ -126,7 +126,7 @@ export default function Privacy() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#1B5E20] mt-8 mb-4 uppercase">10. Alterações a Esta Política</h2>
+                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">10. Alterações a Esta Política</h2>
                 <p>
                   Reservamos o direito de atualizar esta Política de Privacidade. As alterações serão publicadas nesta página com nova data de atualização.
                 </p>
