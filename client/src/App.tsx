@@ -10,7 +10,6 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Quote from "@/pages/Quote";
-import Portfolio from "@/pages/Portfolio";
 import AreaPage from "@/pages/areas/AreaPage";
 import ServicePage from "@/pages/services/ServicePage";
 import Privacy from "@/pages/legal/Privacy";
@@ -23,8 +22,7 @@ function Router() {
       <Route path="/empresa" component={About} />
       <Route path="/contacto" component={Contact} />
       <Route path="/orcamento" component={Quote} />
-      <Route path="/portfolio" component={Portfolio} />
-      
+
       {/* Service Pages */}
       <Route path="/servicos/:slug" component={ServicePage} />
       

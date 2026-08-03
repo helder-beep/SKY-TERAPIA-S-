@@ -3,16 +3,8 @@ import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { Link, useRoute } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, CheckCircle, Phone, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
-
-interface PortfolioRef {
-  title: string;
-  location: string;
-  description: string;
-  previewImage: string;
-  portfolioId: string;
-}
 
 interface ServiceData {
   title: string;
@@ -22,7 +14,6 @@ interface ServiceData {
   features: string[];
   benefits: string[];
   image: string;
-  portfolioRef?: PortfolioRef;
 }
 
 const servicesData: Record<string, ServiceData> = {
@@ -33,14 +24,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "O tarot cigano é uma ferramenta de orientação que combina símbolos tradicionais com a nossa intuição para te ajudar a ver com clareza as situações da tua vida. Cada sessão é feita com total sigilo, num espaço reservado, sem julgamentos — só respostas honestas e orientação prática para as tuas dúvidas sobre amor, trabalho ou decisões importantes.",
     features: ["Leitura de tarot cigano tradicional", "Interpretação intuitiva das cartas", "Foco em amor, trabalho ou vida pessoal", "Sessões presenciais ou online"],
     benefits: ["Mais clareza para decidir", "Respostas diretas e honestas", "Sigilo total sobre a sessão", "Orientação prática para o dia a dia"],
-    image: "/images/espaco/mesa-tarot-detalhe.jpg",
-    portfolioRef: {
-      title: "Cantinho do Tarot",
-      location: "Santarém",
-      description: "Conhece o espaço onde são feitas as leituras de tarot cigano e tarot intuitivo.",
-      previewImage: "/images/espaco/cantinho-joias.jpg",
-      portfolioId: "tarot-cigano"
-    }
+    image: "/images/espaco/mesa-tarot-detalhe.jpg"
   },
   "vidas-passadas": {
     title: "Terapia de Vidas Passadas",
@@ -228,68 +212,6 @@ export default function ServicePage() {
                   </motion.div>
                 </div>
 
-                {/* Portfolio Connection Card */}
-                {service.portfolioRef && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center gap-3 mb-5">
-                      <div className="w-1 h-8 bg-[#9B6DC9]" />
-                      <h3 className="text-xl font-black text-[#2B1B4E] uppercase tracking-tight">
-                        Projeto em Destaque
-                      </h3>
-                    </div>
-                    <Link href="/portfolio">
-                      <div className="group border-2 border-slate-200 hover:border-[#9B6DC9] transition-all duration-300 rounded-sm overflow-hidden cursor-pointer">
-                        <div className="flex flex-col md:flex-row">
-                          {/* Image Preview */}
-                          <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden">
-                            <ImagePlaceholder
-                              src={service.portfolioRef.previewImage}
-                              label={service.portfolioRef.title}
-                              width={400}
-                              height={300}
-                              className="w-full h-full"
-                            />
-                            <div className="absolute inset-0 bg-[#2B1B4E]/20 group-hover:bg-[#2B1B4E]/10 transition-colors duration-300" />
-                            <div className="absolute top-3 left-3">
-                              <span className="bg-[#9B6DC9] text-white text-[9px] font-black uppercase tracking-[0.2em] px-2 py-1">
-                                Portfólio
-                              </span>
-                            </div>
-                          </div>
-                          {/* Content */}
-                          <div className="flex-1 p-6 md:p-8 flex flex-col justify-between bg-white group-hover:bg-slate-50 transition-colors duration-300">
-                            <div>
-                              <div className="flex items-start justify-between gap-4 mb-3">
-                                <div>
-                                  <p className="text-[#9B6DC9] text-[10px] font-black uppercase tracking-[0.25em] mb-1">
-                                    {service.portfolioRef.location}
-                                  </p>
-                                  <h4 className="text-[#2B1B4E] text-xl font-black uppercase tracking-tight leading-tight">
-                                    {service.portfolioRef.title}
-                                  </h4>
-                                </div>
-                                <ExternalLink className="w-5 h-5 text-slate-300 group-hover:text-[#9B6DC9] transition-colors duration-300 shrink-0 mt-1" />
-                              </div>
-                              <p className="text-slate-600 text-sm leading-relaxed font-medium">
-                                {service.portfolioRef.description}
-                              </p>
-                            </div>
-                            <div className="mt-5 pt-5 border-t border-slate-100 flex items-center justify-between">
-                              <span className="text-[#2B1B4E] text-xs font-black uppercase tracking-widest group-hover:text-[#9B6DC9] transition-colors duration-300">
-                                Ver projeto completo
-                              </span>
-                              <ArrowRight className="w-4 h-4 text-[#9B6DC9] -translate-x-1 group-hover:translate-x-1 transition-transform duration-300" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  </motion.div>
-                )}
               </div>
 
               {/* Sidebar */}

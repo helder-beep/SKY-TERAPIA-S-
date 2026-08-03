@@ -142,10 +142,6 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="/portfolio" className={linkClass}>
-              O Espaço
-            </Link>
-
             {/* Áreas de Serviço Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className={cn(linkClass, "outline-none")}>
@@ -232,14 +228,6 @@ export function Navbar() {
               </div>
             )}
           </div>
-
-          <Link 
-            href="/portfolio" 
-            className="text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            O Espaço
-          </Link>
 
           {/* Mobile Áreas Accordion */}
           <div>

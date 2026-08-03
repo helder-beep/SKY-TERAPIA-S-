@@ -11,8 +11,8 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 w-full h-full">
           <ImagePlaceholder
-            src="/images/espaco/mesa-tarot-detalhe.jpg"
-            label="Mesa de tarot Sky Terapia's"
+            src="/images/stock/hero-tarot-candles.jpg"
+            label="Tarot, cristais e velas"
             width={1920}
             height={1080}
             className="w-full h-full"

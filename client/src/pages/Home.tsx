@@ -4,7 +4,6 @@ import { Hero } from "@/components/home/Hero";
 import { Services } from "@/components/home/Services";
 import { AboutSection } from "@/components/home/AboutSection";
 import { Process } from "@/components/home/Process";
-import { Portfolio } from "@/components/home/Portfolio";
 import { Reviews } from "@/components/home/Reviews";
 import { FAQs } from "@/components/home/FAQs";
 import { CTA } from "@/components/home/CTA";
@@ -80,10 +79,6 @@ export default function Home() {
         </div>
 
         <Process />
-
-        <div id="portfolio">
-          <Portfolio />
-        </div>
 
         <div id="reviews">
           <Reviews />
