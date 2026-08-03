@@ -65,9 +65,9 @@ export default function Quote() {
                 <div className="w-14 h-14 rounded-full bg-[#9B6DC9]/10 flex items-center justify-center shrink-0 group-hover:bg-[#9B6DC9] group-hover:text-white transition-all duration-500">
                   <Mail className="w-6 h-6" />
                 </div>
-                <div className="text-left">
+                <div className="text-left min-w-0 flex-1">
                   <h3 className="font-black uppercase text-sm tracking-tight text-[#2B1B4E]">Email</h3>
-                  <p className="text-xs text-[#2B1B4E]/60 uppercase tracking-widest">terapiassky1@gmail.com</p>
+                  <p className="text-xs text-[#2B1B4E]/60 tracking-tight break-all">terapiassky1@gmail.com</p>
                 </div>
               </a>
             </div>
