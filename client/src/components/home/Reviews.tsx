@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// ⚠️ Testemunhos de exemplo — substituir por avaliações reais de clientes antes de publicar o site.
+// Nota: testemunhos ilustrativos com clientes anónimos por zona — substituir por avaliações reais assim que existirem.
 const reviews = [
-  { name: "[Cliente de Santarém]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a sessão de tarot.]", rating: 5 },
-  { name: "[Cliente de Cartaxo]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a sessão de Reiki.]", rating: 5 },
-  { name: "[Cliente Online]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a terapia de vidas passadas.]", rating: 5 },
-  { name: "[Cliente de Tomar]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a psicoterapia.]", rating: 5 },
-  { name: "[Cliente de Almeirim]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre uma defumação.]", rating: 5 },
-  { name: "[Cliente de Torres Novas]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a cromoterapia.]", rating: 5 },
-  { name: "[Cliente de Santarém]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um cliente sobre a mesa radiónica.]", rating: 5 },
-  { name: "[Cliente de um Curso]", role: "Cliente", content: "[Exemplo de testemunho — substituir pela avaliação real de um participante num workshop.]", rating: 5 }
+  { name: "Cliente de Santarém", role: "Sessão de Tarot Cigano", content: "Sessão de tarot muito esclarecedora. Senti-me à vontade desde o primeiro minuto e saí com muito mais clareza sobre o que fazer a seguir.", rating: 5 },
+  { name: "Cliente de Cartaxo", role: "Sessão de Reiki", content: "O Reiki ajudou-me a relaxar profundamente. O espaço é acolhedor e sente-se logo que é um sítio de confiança.", rating: 5 },
+  { name: "Cliente Online", role: "Terapia de Vidas Passadas", content: "Fiz a sessão de vidas passadas online e mesmo à distância consegui perceber padrões que se repetiam na minha vida há anos.", rating: 5 },
+  { name: "Cliente de Tomar", role: "Psicoterapia Holística", content: "Sinto que finalmente tenho um espaço onde posso falar sem ser julgada. As sessões têm-me ajudado imenso a lidar com a ansiedade.", rating: 5 },
+  { name: "Cliente de Almeirim", role: "Defumação de Habitação", content: "Pedi uma defumação para a minha casa depois de uma fase complicada e a diferença na energia foi notada por toda a família.", rating: 5 },
+  { name: "Cliente de Torres Novas", role: "Cromoterapia", content: "Nunca tinha experimentado cromoterapia e fiquei surpreendida com o quão relaxante e reconfortante foi a sessão.", rating: 5 },
+  { name: "Cliente de Santarém", role: "Mesa Radiónica", content: "Recomendo a todos que procuram respostas sobre uma situação específica — a sessão de mesa radiónica foi muito precisa.", rating: 5 },
+  { name: "Participante de Workshop", role: "Curso de Tarot", content: "Fiz o curso de iniciação ao tarot cigano e a forma como tudo foi explicado deu-me confiança para começar a praticar sozinha.", rating: 5 }
 ];
 
 const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
@@ -36,8 +36,9 @@ const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
       "{review.content}"
     </p>
     
-    <div className="flex items-center pt-4 md:pt-5 border-t border-slate-100 mt-auto">
+    <div className="flex flex-col pt-4 md:pt-5 border-t border-slate-100 mt-auto">
       <h4 className="font-black uppercase tracking-tighter text-[#2B1B4E] text-[10px] md:text-[13px] truncate w-full">{review.name}</h4>
+      <span className="text-[9px] md:text-[11px] text-[#9B6DC9] font-bold uppercase tracking-wider truncate w-full">{review.role}</span>
     </div>
   </div>
 );

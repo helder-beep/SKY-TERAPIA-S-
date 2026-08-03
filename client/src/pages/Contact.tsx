@@ -14,7 +14,7 @@ export default function Contact() {
   };
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/000000000", "_blank");
+    window.open("https://wa.me/351923366826", "_blank");
   };
 
   const locations = {
@@ -91,7 +91,7 @@ export default function Contact() {
 
                   {/* Phone Primary */}
                   <a
-                    href="tel:+000000000"
+                    href="tel:+351923366826"
                     className="group bg-white p-5 md:p-6 rounded-[4px] shadow-sm hover:shadow-xl transition-all border-2 border-[#2B1B4E] flex items-center gap-5 md:gap-6"
                   >
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#9B6DC9]/10 flex items-center justify-center shrink-0 group-hover:bg-[#9B6DC9] group-hover:text-white transition-all duration-500">
@@ -99,7 +99,7 @@ export default function Contact() {
                     </div>
                     <div className="text-left">
                       <h3 className="font-black uppercase text-xs md:text-sm tracking-tight text-[#2B1B4E]">Ligar (Telemóvel)</h3>
-                      <p className="text-[10px] md:text-xs text-[#2B1B4E]/60 uppercase tracking-widest">[Telefone]</p>
+                      <p className="text-[10px] md:text-xs text-[#2B1B4E]/60 uppercase tracking-widest">+351 923 366 826</p>
                     </div>
                   </a>
 

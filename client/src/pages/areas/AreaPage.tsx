@@ -110,7 +110,7 @@ export default function AreaPage() {
                   {area.description}
                 </p>
                 <p className="text-[#2B1B4E]/70 text-base md:text-lg leading-relaxed">
-                  Com formação certificada pela DGERT e mais de 4 anos de experiência, garanto sempre total sigilo e um acompanhamento próximo, adaptado a ti.
+                  Com formação certificada pela DGERT e mais de 4 anos de experiência, garantimos sempre total sigilo e um acompanhamento próximo, adaptado a ti.
                 </p>
 
                 <div className="space-y-4 pt-4">
@@ -132,7 +132,7 @@ export default function AreaPage() {
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
-                  <a href="tel:+000000000">
+                  <a href="tel:+351923366826">
                     <Button variant="outline" className="border-2 border-[#2B1B4E] text-[#2B1B4E] hover:bg-[#2B1B4E] hover:text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm">
                       <Phone className="w-5 h-5 mr-2" />
                       Ligar Agora

@@ -37,7 +37,7 @@ export function CTA() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:+000000000">
+            <a href="tel:+351923366826">
               <Button
                 variant="outline"
                 className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-[#2B1B4E] font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm transition-all bg-transparent"

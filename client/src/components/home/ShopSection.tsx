@@ -35,7 +35,7 @@ export function ShopSection() {
               </h2>
 
               <p className="text-[11px] md:text-lg font-light text-white/70 mb-6 md:mb-10 leading-relaxed uppercase tracking-widest max-w-xl mx-auto md:mx-0 px-4 md:px-0">
-                Além das sessões individuais, dou cursos e workshops de terapias holísticas e marco presença em feiras esotéricas por todo o país.
+                Além das sessões individuais, damos cursos e workshops de terapias holísticas e marcamos presença em feiras esotéricas por todo o país.
               </p>
 
               <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 text-left max-w-md mx-auto md:mx-0 px-4 md:px-0">
@@ -61,7 +61,8 @@ export function ShopSection() {
             >
               <div className="absolute inset-0 bg-[#9B6DC9]/10 mix-blend-overlay z-10" />
               <ImagePlaceholder
-                label="[Imagem: Curso/Workshop em Feira]"
+                src="/images/espaco/estante-cristais-oleos.jpg"
+                label="Materiais de cursos e workshops Sky Terapia's"
                 width={1200}
                 height={675}
                 className="w-full h-full"
@@ -75,7 +76,7 @@ export function ShopSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col gap-3 md:flex-row md:gap-4 w-full"
             >
-              <a href="tel:+000000000" className="w-full sm:flex-1">
+              <a href="tel:+351923366826" className="w-full sm:flex-1">
                 <Button className="w-full bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black h-12 md:h-14 rounded-[4px] uppercase tracking-widest text-xs flex items-center justify-center gap-2 transition-all shadow-lg">
                   <Phone className="w-4 h-4" />
                   Pedir Informações

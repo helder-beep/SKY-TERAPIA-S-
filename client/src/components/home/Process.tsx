@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Phone, Sparkles, Heart, CheckCircle } from "lucide-react";
 
 const steps = [
-  { icon: Phone, title: "Marcação", description: "Contactas-me por telefone, email ou WhatsApp e escolhemos juntos a sessão certa para ti.", step: "01" },
-  { icon: Sparkles, title: "Acolhimento", description: "Recebo-te num espaço reservado e tranquilo, onde tudo o que partilhas fica em total sigilo.", step: "02" },
+  { icon: Phone, title: "Marcação", description: "Contactas-nos por telefone, email ou WhatsApp e escolhemos juntos a sessão certa para ti.", step: "01" },
+  { icon: Sparkles, title: "Acolhimento", description: "Recebemos-te num espaço reservado e tranquilo, onde tudo o que partilhas fica em total sigilo.", step: "02" },
   { icon: Heart, title: "A Sessão", description: "Realizamos a terapia escolhida — tarot, reiki, vidas passadas ou outra — ao teu ritmo.", step: "03" },
   { icon: CheckCircle, title: "Acompanhamento", description: "Se precisares, ficamos em contacto para dar continuidade ao teu processo de cura.", step: "04" }
 ];

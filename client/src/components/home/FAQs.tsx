@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: "As sessões são presenciais ou também online?",
-    answer: "Faço atendimento presencial em Santarém e também sessões online (por exemplo, tarot ou mesa radiónica), consoante o tipo de terapia."
+    answer: "Fazemos atendimento presencial em Santarém e também sessões online (por exemplo, tarot ou mesa radiónica), consoante o tipo de terapia."
   },
   {
     question: "Quanto tempo dura uma sessão?",
@@ -17,23 +17,23 @@ const faqs = [
   },
   {
     question: "As terapias substituem acompanhamento médico ou psicológico?",
-    answer: "Não. As terapias holísticas que ofereço são complementares e não substituem tratamento médico, psicológico ou psiquiátrico. Se estás a ser acompanhado(a) por um profissional de saúde, recomendo continuares esse acompanhamento em paralelo."
+    answer: "Não. As terapias holísticas que oferecemos são complementares e não substituem tratamento médico, psicológico ou psiquiátrico. Se estás a ser acompanhado(a) por um profissional de saúde, recomendamos que continues esse acompanhamento em paralelo."
   },
   {
     question: "É garantida a confidencialidade?",
-    answer: "Sim. O sigilo sobre o que é partilhado nas sessões é um dos pilares do meu trabalho — nada do que falamos é partilhado com terceiros."
+    answer: "Sim. O sigilo sobre o que é partilhado nas sessões é um dos pilares do nosso trabalho — nada do que falamos é partilhado com terceiros."
   },
   {
-    question: "Tens formação certificada?",
-    answer: "Sim, tenho formação certificada pela DGERT em Terapias Holísticas e mais de 4 anos de experiência a acompanhar clientes particulares."
+    question: "Têm formação certificada?",
+    answer: "Sim, temos formação certificada pela DGERT em Terapias Holísticas e mais de 4 anos de experiência a acompanhar clientes particulares."
   },
   {
-    question: "Também dás cursos ou workshops?",
-    answer: "Sim! Além das sessões individuais, dou cursos de iniciação a diferentes terapias holísticas e participo regularmente em feiras esotéricas. Contacta-me para saberes as próximas datas."
+    question: "Também dão cursos ou workshops?",
+    answer: "Sim! Além das sessões individuais, damos cursos de iniciação a diferentes terapias holísticas e participamos regularmente em feiras esotéricas. Contacta-nos para saberes as próximas datas."
   },
   {
     question: "Como posso marcar a minha sessão?",
-    answer: "Podes contactar-me por email, telefone ou WhatsApp, ou preencher o formulário na página de Marcar Consulta. Respondo o mais rápido possível para combinarmos o melhor horário."
+    answer: "Podes contactar-nos por email, telefone ou WhatsApp, ou preencher o formulário na página de Marcar Consulta. Respondemos o mais rápido possível para combinarmos o melhor horário."
   }
 ];
 

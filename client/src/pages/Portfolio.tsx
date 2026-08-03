@@ -7,21 +7,82 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 
+interface ProjectImage {
+  src?: string;
+  label: string;
+}
+
 interface Project {
   id: string;
   title: string;
   location: string;
   description: string;
-  images: string[];
+  images: ProjectImage[];
 }
 
 const projects: Project[] = [
-  { id: "sala-atendimento", title: "Sala de Atendimento", location: "Santarém", description: "O espaço reservado onde decorrem as sessões individuais, pensado para o teu conforto e privacidade.", images: ["[Foto: Sala de Atendimento 1]", "[Foto: Sala de Atendimento 2]", "[Foto: Sala de Atendimento 3]", "[Foto: Sala de Atendimento 4]"] },
-  { id: "tarot-cigano", title: "Cantinho do Tarot", location: "Santarém", description: "Baralhos de tarot cigano e tarot intuitivo usados nas sessões de orientação.", images: ["[Foto: Tarot 1]", "[Foto: Tarot 2]", "[Foto: Tarot 3]"] },
-  { id: "reiki-energia", title: "Sessão de Reiki", location: "Santarém", description: "Momentos de cura energética e reequilíbrio através do Reiki.", images: ["[Foto: Reiki 1]", "[Foto: Reiki 2]", "[Foto: Reiki 3]"] },
-  { id: "cristais-cromoterapia", title: "Cristais & Cromoterapia", location: "Santarém", description: "Cristais e ferramentas utilizados nas sessões de cromoterapia e limpeza energética.", images: ["[Foto: Cristais 1]", "[Foto: Cristais 2]", "[Foto: Cristais 3]"] },
-  { id: "defumacoes", title: "Ritual de Defumação", location: "Santarém", description: "Defumações de habitação e negócios para limpeza e renovação energética.", images: ["[Foto: Defumação 1]", "[Foto: Defumação 2]"] },
-  { id: "cursos-feiras", title: "Cursos & Feiras", location: "Vários locais", description: "Momentos de partilha em cursos, workshops e feiras esotéricas por todo o país.", images: ["[Foto: Curso 1]", "[Foto: Feira 1]", "[Foto: Workshop 1]"] }
+  {
+    id: "sala-atendimento",
+    title: "Sala de Atendimento",
+    location: "Santarém",
+    description: "O espaço reservado onde decorrem as sessões individuais, pensado para o teu conforto e privacidade.",
+    images: [
+      { src: "/images/espaco/sala-atendimento.jpg", label: "Sala de atendimento" },
+      { src: "/images/espaco/secretaria-difusor.jpg", label: "Secretária com difusor de óleos" }
+    ]
+  },
+  {
+    id: "tarot-cigano",
+    title: "Cantinho do Tarot",
+    location: "Santarém",
+    description: "Baralhos de tarot cigano e tarot intuitivo usados nas sessões de orientação.",
+    images: [
+      { src: "/images/espaco/mesa-tarot-detalhe.jpg", label: "Mesa de tarot em detalhe" },
+      { src: "/images/espaco/mesa-tarot-ambiente.jpg", label: "Ambiente da mesa de tarot" },
+      { src: "/images/espaco/cantinho-joias.jpg", label: "Cantinho de acessórios e joias" }
+    ]
+  },
+  {
+    id: "reiki-energia",
+    title: "Sessão de Reiki",
+    location: "Santarém",
+    description: "Momentos de cura energética e reequilíbrio através do Reiki.",
+    images: [
+      { src: "/images/espaco/sala-atendimento.jpg", label: "Marquesa para sessões de Reiki" },
+      { src: "/images/espaco/secretaria-difusor.jpg", label: "Ambiente relaxante" }
+    ]
+  },
+  {
+    id: "cristais-cromoterapia",
+    title: "Cristais & Cromoterapia",
+    location: "Santarém",
+    description: "Cristais e ferramentas utilizados nas sessões de cromoterapia e limpeza energética.",
+    images: [
+      { src: "/images/espaco/estante-cristais-oleos.jpg", label: "Estante de cristais e óleos" },
+      { src: "/images/espaco/mesa-tarot-detalhe.jpg", label: "Cristais em detalhe" }
+    ]
+  },
+  {
+    id: "defumacoes",
+    title: "Ritual de Defumação",
+    location: "Santarém",
+    description: "Defumações de habitação e negócios para limpeza e renovação energética.",
+    images: [
+      { src: "/images/espaco/estante-cristais-oleos.jpg", label: "Ervas e incensos para defumação" },
+      { src: "/images/espaco/zen-buddha.jpg", label: "Cantinho zen" }
+    ]
+  },
+  {
+    id: "cursos-feiras",
+    title: "Cursos & Feiras",
+    location: "Vários locais",
+    description: "Momentos de partilha em cursos, workshops e feiras esotéricas por todo o país.",
+    images: [
+      { label: "[Foto: Curso]" },
+      { label: "[Foto: Feira]" },
+      { label: "[Foto: Workshop]" }
+    ]
+  }
 ];
 
 export default function Portfolio() {
@@ -80,7 +141,8 @@ export default function Portfolio() {
                 >
                   <div className="aspect-[16/10] overflow-hidden rounded-lg bg-slate-100 relative mb-6 shadow-md group-hover:shadow-xl transition-all">
                     <ImagePlaceholder
-                      label={project.images[0]}
+                      src={project.images[0].src}
+                      label={project.images[0].label}
                       width={800}
                       height={500}
                       className="w-full h-full"
@@ -127,7 +189,8 @@ export default function Portfolio() {
                 </button>
                 
                 <ImagePlaceholder
-                  label={selectedProject.images[selectedImageIndex]}
+                  src={selectedProject.images[selectedImageIndex].src}
+                  label={selectedProject.images[selectedImageIndex].label}
                   width={1200}
                   height={750}
                   className="w-full h-full"
@@ -150,7 +213,7 @@ export default function Portfolio() {
                       onClick={() => setSelectedImageIndex(idx)}
                       className={`relative w-16 h-16 rounded-sm overflow-hidden flex-shrink-0 transition-all ${selectedImageIndex === idx ? 'ring-2 ring-[#9B6DC9] scale-105' : 'opacity-40 hover:opacity-100'}`}
                     >
-                      <ImagePlaceholder label={img} width={64} height={64} className="w-full h-full" />
+                      <ImagePlaceholder src={img.src} label={img.label} width={64} height={64} className="w-full h-full" />
                     </button>
                   ))}
                 </div>

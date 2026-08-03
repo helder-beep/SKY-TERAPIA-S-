@@ -32,10 +32,10 @@ export function AboutSection() {
               Sobre a <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal">Sky Terapia's</span>
             </h2>
             <p className="text-[#2B1B4E]/70 text-sm md:text-lg leading-relaxed">
-              Sou terapeuta holística há 4 anos, com formação certificada pela DGERT, e trabalho em Santarém com tarot cigano, terapia de vidas passadas, reiki, psicoterapia e outras terapias energéticas.
+              Somos uma marca de terapias holísticas com 4 anos de experiência, formação certificada pela DGERT, e trabalhamos em Santarém com tarot cigano, terapia de vidas passadas, reiki, psicoterapia e outras terapias energéticas.
             </p>
             <p className="text-[#2B1B4E]/70 text-sm md:text-lg leading-relaxed">
-              A minha missão é ajudar-te a encontrar clareza, cura e equilíbrio — num espaço acolhedor, reservado e com total sigilo sobre cada sessão.
+              A nossa missão é ajudar-te a encontrar clareza, cura e equilíbrio — num espaço acolhedor, reservado e com total sigilo sobre cada sessão.
             </p>
 
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 pt-4 text-left max-w-sm mx-auto lg:mx-0">
@@ -66,7 +66,8 @@ export function AboutSection() {
           >
             <div className="aspect-[4/3] md:aspect-square bg-gradient-to-br from-[#2B1B4E] to-[#9B6DC9] rounded-lg overflow-hidden relative w-full">
               <ImagePlaceholder
-                label="[Foto da Terapeuta / Espaço de Atendimento]"
+                src="/images/espaco/mesa-tarot-ambiente.jpg"
+                label="Espaço de atendimento Sky Terapia's"
                 width={800}
                 height={800}
                 className="absolute inset-0 w-full h-full"

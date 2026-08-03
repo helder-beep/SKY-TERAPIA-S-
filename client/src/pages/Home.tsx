@@ -8,7 +8,6 @@ import { Portfolio } from "@/components/home/Portfolio";
 import { Reviews } from "@/components/home/Reviews";
 import { FAQs } from "@/components/home/FAQs";
 import { CTA } from "@/components/home/CTA";
-import { GrassHeightSection } from "@/components/home/GrassHeightSection";
 import { IntegratedServicesSummary } from "@/components/home/IntegratedServicesSummary";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -75,8 +74,6 @@ export default function Home() {
         </div>
 
         <IntegratedServicesSummary />
-
-        <GrassHeightSection />
 
         <div id="about">
           <AboutSection />

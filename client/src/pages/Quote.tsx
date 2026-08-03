@@ -6,7 +6,7 @@ import { Mail, Phone, MessageCircle } from "lucide-react";
 
 export default function Quote() {
   const openWhatsApp = () => {
-    window.open("https://wa.me/000000000", "_blank");
+    window.open("https://wa.me/351923366826", "_blank");
   };
 
   return (
@@ -37,10 +37,10 @@ export default function Quote() {
           <div className="bg-white rounded-lg shadow-2xl border-2 border-[#2B1B4E] p-8 md:p-12">
             <div className="text-center mb-10">
               <h2 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#2B1B4E] mb-3">
-                Diz-me o que procuras
+                Diz-nos o que procuras
               </h2>
               <p className="text-[#2B1B4E]/70 text-sm leading-relaxed">
-                Indica a terapia que te interessa (tarot, reiki, vidas passadas, psicoterapia...) e se preferes sessão presencial em Santarém ou online. Respondo o mais rápido possível.
+                Indica a terapia que te interessa (tarot, reiki, vidas passadas, psicoterapia...) e se preferes sessão presencial em Santarém ou online. Respondemos o mais rápido possível.
               </p>
             </div>
 
@@ -72,7 +72,7 @@ export default function Quote() {
               </a>
             </div>
 
-            <a href="tel:+000000000">
+            <a href="tel:+351923366826">
               <Button className="w-full bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black uppercase tracking-[0.2em] h-14 rounded-[4px] shadow-xl transition-all text-sm flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Ligar Agora

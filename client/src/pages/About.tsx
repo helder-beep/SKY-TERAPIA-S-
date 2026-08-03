@@ -60,7 +60,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight leading-none">
-                QUEM <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal px-2">sou?</span>
+                QUEM <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal px-2">somos?</span>
               </h1>
             </motion.div>
           </div>
@@ -78,16 +78,19 @@ export default function About() {
               >
                 <div className="text-sm md:text-lg text-slate-700 leading-relaxed font-medium mb-10 md:mb-12 space-y-4 md:space-y-6 px-4 md:px-0">
                   <p>
-                    Sou terapeuta holística há mais de 4 anos, com formação certificada pela DGERT, dedicada a ajudar pessoas a encontrar clareza, cura e equilíbrio através do tarot, do reiki e de outras terapias energéticas.
+                    Somos uma marca de terapias holísticas com mais de 4 anos de experiência e formação certificada pela DGERT, dedicada a ajudar pessoas a encontrar clareza, cura e equilíbrio através do tarot, do reiki e de outras terapias energéticas.
                   </p>
                   <p>
-                    Trabalho com clientes particulares em Santarém e também à distância, para quem prefere sessões online. Cada pessoa é acompanhada de forma individual, respeitando o seu ritmo e a sua história.
+                    Trabalhamos com clientes particulares em Santarém e também à distância, para quem prefere sessões online. Cada pessoa é acompanhada de forma individual, respeitando o seu ritmo e a sua história.
                   </p>
                   <p>
-                    Ofereço tarot cigano, terapia de vidas passadas, psicoterapia holística, reiki, defumações, mesa radiónica, EFT, cromoterapia, aromaterapia e trabalhos de proteção, amor e abundância — além de cursos e workshops que dou regularmente em feiras esotéricas.
+                    Oferecemos tarot cigano, terapia de vidas passadas, psicoterapia holística, reiki, defumações, mesa radiónica, EFT, cromoterapia, aromaterapia e trabalhos de proteção, amor e abundância — além de cursos e workshops que damos regularmente em feiras esotéricas.
                   </p>
                   <p className="font-black text-[#2B1B4E] uppercase tracking-tighter text-lg md:text-xl">
                     Sigilo total. Espaço acolhedor. Cuidado genuíno.
+                  </p>
+                  <p className="font-display italic normal-case font-normal text-[#2B1B4E]/80 text-base md:text-lg pt-2">
+                    — Cláudia, Sky Terapia's
                   </p>
                 </div>
                 
@@ -109,7 +112,7 @@ export default function About() {
                       Contate-nos!
                     </Button>
                   </Link>
-                  <a href="tel:+000000000">
+                  <a href="tel:+351923366826">
                     <Button variant="outline" className="border-2 border-[#2B1B4E] text-[#2B1B4E] hover:bg-[#2B1B4E] hover:text-white font-black rounded-[4px] px-12 h-14 text-xs tracking-[0.2em] uppercase transition-all">
                       Ligar Agora
                     </Button>

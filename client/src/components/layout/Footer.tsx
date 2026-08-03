@@ -27,7 +27,7 @@ export function Footer() {
             <div className="flex flex-col gap-1 text-center md:text-right">
               <span className="text-[10px] opacity-60 tracking-[0.2em]">Apoio ao Cliente</span>
               <div className="flex flex-col gap-1">
-                <a href="tel:+000000000" className="text-xs md:text-sm hover:text-[#E8B54D] transition-colors">[Telefone]</a>
+                <a href="tel:+351923366826" className="text-xs md:text-sm hover:text-[#E8B54D] transition-colors">+351 923 366 826</a>
               </div>
             </div>
           </div>
@@ -41,10 +41,12 @@ export function Footer() {
             {/* Logo */}
             <Link href="/">
               <ImagePlaceholder
-                label="[Logótipo SKY TERAPIA'S]"
+                src="/logo.png"
+                fit="contain"
+                label="Sky Terapia's"
                 width={200}
                 height={64}
-                className="h-14 md:h-16 w-[175px] md:w-[200px] cursor-pointer"
+                className="h-14 md:h-16 w-auto cursor-pointer"
               />
             </Link>
 

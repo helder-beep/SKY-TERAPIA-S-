@@ -1,7 +1,7 @@
 import { SiWhatsapp } from "react-icons/si";
 
 export function WhatsAppButton() {
-  const phoneNumber = "351910000000"; // Placeholder, substituir pelo número real
+  const phoneNumber = "351923366826"; // Placeholder, substituir pelo número real
   const message = "Olá! Gostaria de marcar uma consulta.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

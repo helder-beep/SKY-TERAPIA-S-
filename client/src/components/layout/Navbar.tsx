@@ -85,7 +85,7 @@ export function Navbar() {
             </div>
             <div className="flex items-center gap-4">
               <div className="flex flex-col items-end">
-                <span>Contacto: <a href="tel:+000000000" className="hover:text-[#E8B54D] transition-colors">[Telefone]</a></span>
+                <span>Contacto: <a href="tel:+351923366826" className="hover:text-[#E8B54D] transition-colors">+351 923 366 826</a></span>
               </div>
               <div className="h-3 w-[1px] bg-white/30 mx-1" />
               <div className="flex items-center gap-3">
@@ -107,10 +107,12 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/">
             <ImagePlaceholder
-              label="[Logótipo SKY TERAPIA'S]"
+              src="/logo.png"
+              fit="contain"
+              label="Sky Terapia's"
               width={200}
               height={56}
-              className="h-12 md:h-14 w-[171px] md:w-[200px] cursor-pointer"
+              className="h-12 md:h-14 w-auto cursor-pointer"
             />
           </Link>
 

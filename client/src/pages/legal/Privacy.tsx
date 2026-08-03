@@ -26,7 +26,7 @@ export default function Privacy() {
                   <strong>SKY TERAPIA'S</strong><br />
                   Santarém, Portugal (marcação prévia)<br />
                   NIF: [Inserir NIF]<br />
-                  Telefone: [Telefone]<br />
+                  Telefone: +351 923 366 826<br />
                   Email: terapiassky1@gmail.com
                 </p>
               </section>

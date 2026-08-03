@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 
 const portfolioGallery = [
-  { id: "p1", label: "Sala de Atendimento", size: "large" },
-  { id: "p2", label: "Baralhos de Tarot", size: "small" },
-  { id: "p3", label: "Cristais & Cromoterapia", size: "small" },
-  { id: "p4", label: "Ritual de Defumação", size: "small" },
-  { id: "p5", label: "Sessão de Reiki", size: "small" },
-  { id: "p6", label: "Óleos de Aromaterapia", size: "small" },
-  { id: "p7", label: "Certificação DGERT", size: "small" },
+  { id: "p1", label: "Sala de Atendimento", size: "large", src: "/images/espaco/sala-atendimento.jpg" },
+  { id: "p2", label: "Baralhos de Tarot", size: "small", src: "/images/espaco/mesa-tarot-detalhe.jpg" },
+  { id: "p3", label: "Cristais & Cromoterapia", size: "small", src: "/images/espaco/estante-cristais-oleos.jpg" },
+  { id: "p4", label: "Ritual de Defumação", size: "small", src: "/images/espaco/zen-buddha.jpg" },
+  { id: "p5", label: "Sessão de Reiki", size: "small", src: "/images/espaco/secretaria-difusor.jpg" },
+  { id: "p6", label: "Óleos de Aromaterapia", size: "small", src: "/images/espaco/estante-decorativa.jpg" },
+  { id: "p7", label: "Certificação DGERT", size: "small", src: "/images/espaco/certificados.jpg" },
 ];
 
 export function Portfolio() {
@@ -38,7 +38,7 @@ export function Portfolio() {
             <p className="text-xs text-[#2B1B4E]/80 font-bold leading-relaxed">
               Conhece o espaço onde decorrem as sessões — acolhedor, reservado e pensado para o teu conforto.
             </p>
-            <a href="tel:+000000000">
+            <a href="tel:+351923366826">
               <Button className="w-full bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black uppercase text-xs tracking-widest rounded-[4px] h-14">
                 Ligar Agora
               </Button>
@@ -51,7 +51,7 @@ export function Portfolio() {
           {/* Main Large Image (Img 1 - 2x2) */}
           <div className="w-full md:col-span-2 md:row-span-2 overflow-hidden rounded-sm group relative aspect-square">
             <ImagePlaceholder
-              label={portfolioGallery[0].label}
+              src={portfolioGallery[0].src} label={portfolioGallery[0].label}
               width={800}
               height={800}
               className="w-full h-full"
@@ -66,13 +66,13 @@ export function Portfolio() {
             {/* Img 2 & Img 5 Column */}
             <div className="md:col-span-1 flex flex-col gap-2 md:gap-4">
               <div className="overflow-hidden rounded-sm group relative aspect-square">
-                <ImagePlaceholder label={portfolioGallery[1].label} width={400} height={400} className="w-full h-full" />
+                <ImagePlaceholder src={portfolioGallery[1].src} label={portfolioGallery[1].label} width={400} height={400} className="w-full h-full" />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <Maximize2 className="text-white w-6 h-6" />
                 </div>
               </div>
               <div className="overflow-hidden rounded-sm group relative aspect-square">
-                <ImagePlaceholder label={portfolioGallery[4].label} width={400} height={400} className="w-full h-full" />
+                <ImagePlaceholder src={portfolioGallery[4].src} label={portfolioGallery[4].label} width={400} height={400} className="w-full h-full" />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <Maximize2 className="text-white w-6 h-6" />
                 </div>
@@ -82,13 +82,13 @@ export function Portfolio() {
             {/* Img 3 & Img 6 Column */}
             <div className="md:col-span-1 flex flex-col gap-2 md:gap-4">
               <div className="overflow-hidden rounded-sm group relative aspect-square">
-                <ImagePlaceholder label={portfolioGallery[2].label} width={400} height={400} className="w-full h-full" />
+                <ImagePlaceholder src={portfolioGallery[2].src} label={portfolioGallery[2].label} width={400} height={400} className="w-full h-full" />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <Maximize2 className="text-white w-6 h-6" />
                 </div>
               </div>
               <div className="overflow-hidden rounded-sm group relative aspect-square">
-                <ImagePlaceholder label={portfolioGallery[5].label} width={400} height={400} className="w-full h-full" />
+                <ImagePlaceholder src={portfolioGallery[5].src} label={portfolioGallery[5].label} width={400} height={400} className="w-full h-full" />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <Maximize2 className="text-white w-6 h-6" />
                 </div>
@@ -99,13 +99,13 @@ export function Portfolio() {
           {/* Img 4 & Img 7 Column - Hidden on mobile, shown on md+ */}
           <div className="hidden md:flex md:col-span-1 flex-col gap-2 md:gap-4">
             <div className="overflow-hidden rounded-sm group relative aspect-square">
-              <ImagePlaceholder label={portfolioGallery[3].label} width={400} height={400} className="w-full h-full" />
+              <ImagePlaceholder src={portfolioGallery[3].src} label={portfolioGallery[3].label} width={400} height={400} className="w-full h-full" />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                 <Maximize2 className="text-white w-6 h-6" />
               </div>
             </div>
             <div className="overflow-hidden rounded-sm group relative aspect-square">
-              <ImagePlaceholder label={portfolioGallery[6].label} width={400} height={400} className="w-full h-full" />
+              <ImagePlaceholder src={portfolioGallery[6].src} label={portfolioGallery[6].label} width={400} height={400} className="w-full h-full" />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                 <Maximize2 className="text-white w-6 h-6" />
               </div>

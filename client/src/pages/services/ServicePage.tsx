@@ -30,15 +30,15 @@ const servicesData: Record<string, ServiceData> = {
     title: "Tarot Cigano Intuitivo",
     subtitle: "ORIENTAÇÃO E CLAREZA",
     description: "Leitura de tarot cigano e tarot intuitivo para trazer clareza sobre amor, trabalho e caminho de vida.",
-    fullContent: "O tarot cigano é uma ferramenta de orientação que combina símbolos tradicionais com a minha intuição para te ajudar a ver com clareza as situações da tua vida. Cada sessão é feita com total sigilo, num espaço reservado, sem julgamentos — só respostas honestas e orientação prática para as tuas dúvidas sobre amor, trabalho ou decisões importantes.",
+    fullContent: "O tarot cigano é uma ferramenta de orientação que combina símbolos tradicionais com a nossa intuição para te ajudar a ver com clareza as situações da tua vida. Cada sessão é feita com total sigilo, num espaço reservado, sem julgamentos — só respostas honestas e orientação prática para as tuas dúvidas sobre amor, trabalho ou decisões importantes.",
     features: ["Leitura de tarot cigano tradicional", "Interpretação intuitiva das cartas", "Foco em amor, trabalho ou vida pessoal", "Sessões presenciais ou online"],
     benefits: ["Mais clareza para decidir", "Respostas diretas e honestas", "Sigilo total sobre a sessão", "Orientação prática para o dia a dia"],
-    image: "[Imagem: baralho de tarot cigano]",
+    image: "/images/espaco/mesa-tarot-detalhe.jpg",
     portfolioRef: {
       title: "Cantinho do Tarot",
       location: "Santarém",
       description: "Conhece o espaço onde são feitas as leituras de tarot cigano e tarot intuitivo.",
-      previewImage: "[Foto: Tarot 1]",
+      previewImage: "/images/espaco/cantinho-joias.jpg",
       portfolioId: "tarot-cigano"
     }
   },
@@ -46,10 +46,10 @@ const servicesData: Record<string, ServiceData> = {
     title: "Terapia de Vidas Passadas",
     subtitle: "CURA DE PADRÕES ANTIGOS",
     description: "Regressão e terapia de vidas passadas para curar bloqueios emocionais que se repetem no presente.",
-    fullContent: "Muitos medos, bloqueios e padrões repetitivos têm origem em memórias de vidas passadas. Através da terapia de vidas passadas, ajudo-te a identificar essas marcas e a libertá-las, trazendo mais leveza, compreensão e paz sobre o teu percurso atual. Cada sessão decorre num ambiente calmo e seguro, ao teu ritmo.",
+    fullContent: "Muitos medos, bloqueios e padrões repetitivos têm origem em memórias de vidas passadas. Através da terapia de vidas passadas, ajudamos-te a identificar essas marcas e a libertá-las, trazendo mais leveza, compreensão e paz sobre o teu percurso atual. Cada sessão decorre num ambiente calmo e seguro, ao teu ritmo.",
     features: ["Sessão de regressão guiada", "Identificação de padrões repetitivos", "Ambiente calmo e seguro", "Acompanhamento pós-sessão"],
     benefits: ["Liberta bloqueios emocionais antigos", "Traz compreensão sobre padrões atuais", "Promove sensação de leveza e paz", "Sessão individual e confidencial"],
-    image: "[Imagem: sessão de regressão]"
+    image: "/images/espaco/zen-buddha.jpg"
   },
   "psicoterapia": {
     title: "Psicoterapia Holística",
@@ -58,25 +58,25 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "Um acompanhamento próximo e humano, onde a psicoterapia se cruza com ferramentas holísticas para trabalhar ansiedade, autoestima e momentos de transição de vida. As sessões são pensadas para te ouvir sem julgamentos e ajudar-te a encontrar as tuas próprias respostas, sempre com total confidencialidade.",
     features: ["Sessões individuais regulares", "Abordagem holística e humana", "Foco em ansiedade e autoestima", "Acompanhamento em transições de vida"],
     benefits: ["Espaço seguro para falares livremente", "Ferramentas práticas para o dia a dia", "Acompanhamento ao teu ritmo", "Sigilo profissional garantido"],
-    image: "[Imagem: sessão individual]"
+    image: "/images/espaco/mesa-tarot-ambiente.jpg"
   },
   "reiki": {
     title: "Reiki & Cura Energética",
     subtitle: "EQUILÍBRIO E ENERGIA",
     description: "Sessões de Reiki para reequilibrar a tua energia e promover a cura de pessoas e ambientes.",
-    fullContent: "O Reiki é uma técnica de canalização de energia que ajuda a libertar tensões, equilibrar emoções e promover a cura a nível físico, emocional e espiritual. Além das sessões individuais, também trabalho a energia de espaços e negócios, ajudando a criar ambientes mais leves e harmoniosos.",
+    fullContent: "O Reiki é uma técnica de canalização de energia que ajuda a libertar tensões, equilibrar emoções e promover a cura a nível físico, emocional e espiritual. Além das sessões individuais, também trabalhamos a energia de espaços e negócios, ajudando a criar ambientes mais leves e harmoniosos.",
     features: ["Sessão de Reiki presencial", "Cura energética de pessoas", "Harmonização de espaços e negócios", "Ambiente relaxante e acolhedor"],
     benefits: ["Reduz stress e tensão", "Promove equilíbrio emocional", "Melhora a energia do ambiente", "Complementa outras terapias"],
-    image: "[Imagem: sessão de Reiki]"
+    image: "/images/espaco/sala-atendimento.jpg"
   },
   "defumacoes": {
     title: "Defumações & Limpeza Energética",
     subtitle: "HABITAÇÃO E NEGÓCIOS",
     description: "Defumações de habitação e negócios para limpar energias densas e atrair boas vibrações.",
-    fullContent: "Através de defumações e rituais de limpeza energética, ajudo a renovar a energia da tua casa ou do teu negócio, removendo bloqueios e criando um ambiente mais leve, próspero e harmonioso. Ideal após mudanças, conflitos ou sempre que sentires o ambiente 'pesado'.",
+    fullContent: "Através de defumações e rituais de limpeza energética, ajudamos a renovar a energia da tua casa ou do teu negócio, removendo bloqueios e criando um ambiente mais leve, próspero e harmonioso. Ideal após mudanças, conflitos ou sempre que sentires o ambiente 'pesado'.",
     features: ["Defumação de habitações", "Defumação de espaços comerciais", "Rituais de limpeza energética", "Orientação para manter o espaço equilibrado"],
     benefits: ["Renova a energia do espaço", "Remove bloqueios acumulados", "Cria ambiente mais harmonioso", "Indicado após mudanças ou conflitos"],
-    image: "[Imagem: ritual de defumação]"
+    image: "/images/espaco/estante-cristais-oleos.jpg"
   },
   "mesa-radionica-eft": {
     title: "Mesa Radiónica & EFT",
@@ -85,7 +85,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "A mesa radiónica permite trabalhar à distância questões de saúde, finanças e relações, enquanto o EFT (Técnica de Libertação Emocional) usa toques em pontos específicos do corpo para libertar emoções bloqueadas de forma rápida e eficaz. Duas ferramentas complementares para desbloquear o que te impede de avançar.",
     features: ["Trabalho com mesa radiónica", "Sessões de EFT (tapping)", "Pode ser feito à distância", "Foco em saúde, finanças ou relações"],
     benefits: ["Liberta emoções bloqueadas rapidamente", "Funciona também à distância", "Aborda causas energéticas profundas", "Complementa outras terapias"],
-    image: "[Imagem: mesa radiónica]"
+    image: "/images/espaco/mesa-tarot-detalhe.jpg"
   },
   "cromoterapia-aromaterapia": {
     title: "Cromoterapia & Aromaterapia",
@@ -94,16 +94,16 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "A cromoterapia e a aromaterapia trabalham através dos sentidos — cor e aroma — para promover relaxamento profundo, equilíbrio emocional e uma sensação de bem-estar imediato. São ótimas como complemento a outras sessões ou como uma experiência independente de relaxamento.",
     features: ["Sessão de cromoterapia", "Aromaterapia com óleos essenciais", "Ambiente relaxante e sensorial", "Pode combinar-se com outras terapias"],
     benefits: ["Relaxamento imediato", "Equilíbrio emocional através dos sentidos", "Experiência suave e acessível", "Boa introdução às terapias holísticas"],
-    image: "[Imagem: óleos e cores terapêuticas]"
+    image: "/images/espaco/estante-decorativa.jpg"
   },
   "protecao-abundancia": {
     title: "Proteção, Amor & Abundância",
     subtitle: "TRABALHOS ESPECÍFICOS",
     description: "Trabalhos de proteção, amor e ascensão financeira feitos à tua medida.",
-    fullContent: "Sessões personalizadas de proteção energética, harmonização amorosa e desbloqueio financeiro, sempre adaptadas à tua situação pessoal. Depois de perceber o que procuras, construo um trabalho à tua medida, com total confidencialidade sobre o processo e os resultados.",
+    fullContent: "Sessões personalizadas de proteção energética, harmonização amorosa e desbloqueio financeiro, sempre adaptadas à tua situação pessoal. Depois de perceber o que procuras, construímos um trabalho à tua medida, com total confidencialidade sobre o processo e os resultados.",
     features: ["Trabalhos de proteção energética", "Harmonização em relações amorosas", "Desbloqueio e ascensão financeira", "Sessões totalmente personalizadas"],
     benefits: ["Trabalho adaptado à tua situação", "Confidencialidade total", "Acompanhamento próximo", "Foco em resultados práticos"],
-    image: "[Imagem: ritual de proteção e abundância]"
+    image: "/images/espaco/cantinho-joias.jpg"
   }
 };
 
@@ -135,7 +135,7 @@ export default function ServicePage() {
         <section className="relative h-[25vh] md:h-[30vh] min-h-[200px] overflow-hidden flex items-center bg-[#2B1B4E]">
           {service.image && (
             <>
-              <ImagePlaceholder label={service.image} width={1400} height={500} className="absolute inset-0 w-full h-full" />
+              <ImagePlaceholder src={service.image} label={service.title} width={1400} height={500} className="absolute inset-0 w-full h-full" />
               <div className="absolute inset-0 bg-gradient-to-b from-[#2B1B4E]/40 to-[#2B1B4E]/80" />
             </>
           )}
@@ -247,7 +247,8 @@ export default function ServicePage() {
                           {/* Image Preview */}
                           <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden">
                             <ImagePlaceholder
-                              label={service.portfolioRef.previewImage}
+                              src={service.portfolioRef.previewImage}
+                              label={service.portfolioRef.title}
                               width={400}
                               height={300}
                               className="w-full h-full"
@@ -312,7 +313,7 @@ export default function ServicePage() {
                         <ArrowRight className="w-5 h-5 ml-2" />
                       </Button>
                     </Link>
-                    <a href="tel:+000000000" className="block">
+                    <a href="tel:+351923366826" className="block">
                       <Button variant="outline" className="w-full border-2 border-white text-white hover:bg-white hover:text-[#2B1B4E] font-black uppercase tracking-widest py-6 h-auto text-sm rounded-sm bg-transparent">
                         <Phone className="w-5 h-5 mr-2" />
                         Ligar Agora
@@ -324,7 +325,7 @@ export default function ServicePage() {
                       Apoio Permanente
                     </p>
                     <p className="text-white font-black text-lg mt-1">
-                      [Telefone]
+                      +351 923 366 826
                     </p>
                   </div>
                 </motion.div>

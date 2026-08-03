@@ -10,9 +10,13 @@ const services = [
     title: "Tarot Cigano Intuitivo",
     subtitle: "ORIENTAÇÃO E CLAREZA",
     description: "Leitura de tarot cigano e tarot intuitivo para trazer clareza sobre amor, trabalho e caminho de vida.",
-    details: "Cada sessão de tarot é feita com total sigilo, num espaço reservado e sem julgamentos. Combino a leitura tradicional do tarot cigano com a minha intuição para te dar respostas concretas e orientação prática para as tuas dúvidas do dia a dia.",
+    details: "Cada sessão de tarot é feita com total sigilo, num espaço reservado e sem julgamentos. Combinamos a leitura tradicional do tarot cigano com a nossa intuição para te dar respostas concretas e orientação prática para as tuas dúvidas do dia a dia.",
     slug: "tarot-cigano",
-    thumbnails: ["Baralho de Tarot Cigano", "Sessão de Leitura"]
+    image: "/images/espaco/mesa-tarot-detalhe.jpg",
+    thumbnails: [
+      { label: "Baralho de Tarot Cigano", src: "/images/espaco/mesa-tarot-ambiente.jpg" },
+      { label: "Sessão de Leitura", src: "/images/espaco/cantinho-joias.jpg" }
+    ]
   },
   {
     title: "Terapia de Vidas Passadas",
@@ -20,7 +24,11 @@ const services = [
     description: "Regressão e terapia de vidas passadas para curar bloqueios emocionais que se repetem no presente.",
     details: "Muitos dos nossos medos, bloqueios e padrões repetitivos têm origem em memórias e experiências de vidas passadas. Esta terapia ajuda-te a identificar e libertar essas marcas, trazendo mais leveza e compreensão sobre o teu percurso atual.",
     slug: "vidas-passadas",
-    thumbnails: ["Sessão de Regressão", "Espaço de Terapia"]
+    image: "/images/espaco/zen-buddha.jpg",
+    thumbnails: [
+      { label: "Sessão de Regressão", src: "/images/espaco/sala-atendimento.jpg" },
+      { label: "Espaço de Terapia", src: "/images/espaco/mesa-tarot-ambiente.jpg" }
+    ]
   },
   {
     title: "Psicoterapia Holística",
@@ -28,7 +36,11 @@ const services = [
     description: "Apoio psicoterapêutico integrado com terapias holísticas para o teu bem-estar emocional.",
     details: "Um acompanhamento próximo e humano, onde a psicoterapia se cruza com ferramentas holísticas para trabalhar ansiedade, autoestima e momentos de transição de vida. Sempre com total confidencialidade e ao teu ritmo.",
     slug: "psicoterapia",
-    thumbnails: ["Sessão Individual", "Ambiente Acolhedor"]
+    image: "/images/espaco/mesa-tarot-ambiente.jpg",
+    thumbnails: [
+      { label: "Sessão Individual", src: "/images/espaco/sala-atendimento.jpg" },
+      { label: "Ambiente Acolhedor", src: "/images/espaco/secretaria-difusor.jpg" }
+    ]
   },
   {
     title: "Reiki & Cura Energética",
@@ -36,15 +48,23 @@ const services = [
     description: "Sessões de Reiki para reequilibrar a tua energia e promover a cura de pessoas e ambientes.",
     details: "O Reiki é uma técnica de canalização de energia que ajuda a libertar tensões, equilibrar as emoções e promover a cura a nível físico, emocional e espiritual — tanto em pessoas como em espaços e negócios.",
     slug: "reiki",
-    thumbnails: ["Sessão de Reiki", "Cura Energética"]
+    image: "/images/espaco/sala-atendimento.jpg",
+    thumbnails: [
+      { label: "Sessão de Reiki", src: "/images/espaco/secretaria-difusor.jpg" },
+      { label: "Cura Energética", src: "/images/espaco/zen-buddha.jpg" }
+    ]
   },
   {
     title: "Defumações & Limpeza Energética",
     subtitle: "HABITAÇÃO E NEGÓCIOS",
     description: "Defumações de habitação e negócios para limpar energias densas e atrair boas vibrações.",
-    details: "Através de defumações e rituais de limpeza energética, ajudo a renovar a energia da tua casa ou do teu negócio, removendo bloqueios e criando um ambiente mais leve, próspero e harmonioso.",
+    details: "Através de defumações e rituais de limpeza energética, ajudamos a renovar a energia da tua casa ou do teu negócio, removendo bloqueios e criando um ambiente mais leve, próspero e harmonioso.",
     slug: "defumacoes",
-    thumbnails: ["Ritual de Defumação", "Limpeza de Espaços"]
+    image: "/images/espaco/estante-cristais-oleos.jpg",
+    thumbnails: [
+      { label: "Ritual de Defumação", src: "/images/espaco/zen-buddha.jpg" },
+      { label: "Limpeza de Espaços", src: "/images/espaco/estante-decorativa.jpg" }
+    ]
   },
   {
     title: "Mesa Radiónica & EFT",
@@ -52,7 +72,11 @@ const services = [
     description: "Trabalho com mesa radiónica e sessões de EFT para libertar bloqueios emocionais e energéticos.",
     details: "A mesa radiónica permite trabalhar à distância questões de saúde, finanças e relações, enquanto o EFT (Técnica de Libertação Emocional) usa toques em pontos específicos do corpo para libertar emoções bloqueadas de forma rápida e eficaz.",
     slug: "mesa-radionica-eft",
-    thumbnails: ["Mesa Radiónica", "Sessão de EFT"]
+    image: "/images/espaco/mesa-tarot-detalhe.jpg",
+    thumbnails: [
+      { label: "Mesa Radiónica", src: "/images/espaco/mesa-tarot-ambiente.jpg" },
+      { label: "Sessão de EFT", src: "/images/espaco/sala-atendimento.jpg" }
+    ]
   },
   {
     title: "Cromoterapia & Aromaterapia",
@@ -60,7 +84,11 @@ const services = [
     description: "Terapias com cores e óleos essenciais para relaxar o corpo e a mente.",
     details: "A cromoterapia e a aromaterapia trabalham através dos sentidos para promover relaxamento profundo, equilíbrio emocional e uma sensação de bem-estar imediato, complementando as restantes terapias oferecidas.",
     slug: "cromoterapia-aromaterapia",
-    thumbnails: ["Óleos Essenciais", "Terapia das Cores"]
+    image: "/images/espaco/estante-decorativa.jpg",
+    thumbnails: [
+      { label: "Óleos Essenciais", src: "/images/espaco/estante-cristais-oleos.jpg" },
+      { label: "Terapia das Cores", src: "/images/espaco/secretaria-difusor.jpg" }
+    ]
   },
   {
     title: "Proteção, Amor & Abundância",
@@ -68,7 +96,11 @@ const services = [
     description: "Trabalhos de proteção, amor e ascensão financeira feitos à tua medida.",
     details: "Sessões personalizadas de proteção energética, harmonização amorosa e desbloqueio financeiro, sempre adaptadas à tua situação pessoal e com total confidencialidade sobre o processo.",
     slug: "protecao-abundancia",
-    thumbnails: ["Ritual de Proteção", "Trabalho de Abundância"]
+    image: "/images/espaco/cantinho-joias.jpg",
+    thumbnails: [
+      { label: "Ritual de Proteção", src: "/images/espaco/zen-buddha.jpg" },
+      { label: "Trabalho de Abundância", src: "/images/espaco/estante-cristais-oleos.jpg" }
+    ]
   }
 ];
 
@@ -125,7 +157,8 @@ export function Services() {
               {/* Left Column - Large Image */}
               <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[500px] overflow-hidden rounded-sm group shadow-2xl">
                 <ImagePlaceholder
-                  label={`[Imagem: ${services[activeTab].title}]`}
+                  src={services[activeTab].image}
+                  label={services[activeTab].title}
                   width={1000}
                   height={750}
                   className="w-full h-full"
@@ -168,7 +201,8 @@ export function Services() {
                   {services[activeTab].thumbnails.map((thumb, i) => (
                     <div key={i} className="relative aspect-video overflow-hidden rounded-sm group shadow-lg">
                       <ImagePlaceholder
-                        label={thumb}
+                        src={thumb.src}
+                        label={thumb.label}
                         width={400}
                         height={225}
                         className="w-full h-full"

@@ -9,6 +9,10 @@ interface ImagePlaceholderProps {
   /** Texto curto a indicar que imagem deveria estar aqui */
   label?: string;
   className?: string;
+  /** Caminho da imagem real. Quando definido, mostra a imagem em vez do placeholder */
+  src?: string;
+  /** object-fit da imagem real (default: cover) */
+  fit?: "cover" | "contain";
 }
 
 export function ImagePlaceholder({
@@ -16,7 +20,19 @@ export function ImagePlaceholder({
   height = 800,
   label = "Imagem",
   className,
+  src,
+  fit = "cover",
 }: ImagePlaceholderProps) {
+  if (src) {
+    return (
+      <img
+        src={src}
+        alt={label}
+        className={cn(fit === "cover" ? "object-cover" : "object-contain", className)}
+      />
+    );
+  }
+
   return (
     <div
       role="img"
