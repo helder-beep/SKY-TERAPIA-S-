@@ -92,7 +92,7 @@ export function Navbar() {
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E8B54D] transition-all hover:scale-110">
                   <Facebook className="w-4 h-4" />
                 </a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E8B54D] transition-all hover:scale-110">
+                <a href="https://www.instagram.com/sky_terapias/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E8B54D] transition-all hover:scale-110">
                   <Instagram className="w-4 h-4" />
                 </a>
               </div>

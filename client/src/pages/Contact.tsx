@@ -80,7 +80,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/sky_terapias/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors"
@@ -90,7 +90,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold uppercase text-sm tracking-tight text-[#2B1B4E]">Instagram</h3>
-                  <p className="text-xs text-[#2B1B4E]/60">[@ Instagram a confirmar]</p>
+                  <p className="text-xs text-[#2B1B4E]/60">@sky_terapias</p>
                 </div>
               </a>
             </motion.div>

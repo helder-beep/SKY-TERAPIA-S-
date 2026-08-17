@@ -66,7 +66,7 @@ export function Footer() {
               <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-[#2B1B4E] hover:text-[#9B6DC9] transition-all hover:scale-110">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-[#2B1B4E] hover:text-[#9B6DC9] transition-all hover:scale-110">
+              <a href="https://www.instagram.com/sky_terapias/" target="_blank" rel="noopener noreferrer" className="text-[#2B1B4E] hover:text-[#9B6DC9] transition-all hover:scale-110">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
