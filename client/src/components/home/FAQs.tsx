@@ -49,10 +49,10 @@ export function FAQs() {
           viewport={{ once: true }}
           className="text-center mb-10 md:mb-16"
         >
-          <span className="text-[#9B6DC9] text-xs font-black uppercase tracking-[0.3em] mb-4 block">
+          <span className="text-[#9B6DC9] text-xs font-bold uppercase tracking-[0.15em] mb-4 block">
             Perguntas Frequentes
           </span>
-          <h2 className="text-[1.75rem] md:text-5xl font-black text-[#2B1B4E] uppercase tracking-tight mb-4 leading-tight">
+          <h2 className="text-[1.75rem] md:text-5xl font-bold text-[#2B1B4E] uppercase tracking-tight mb-4 leading-tight">
             Perguntas sobre <span className="text-[#9B6DC9]">as Nossas Terapias</span>
           </h2>
           <p className="text-[#2B1B4E]/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">

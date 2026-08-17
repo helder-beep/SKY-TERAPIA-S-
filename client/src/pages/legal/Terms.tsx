@@ -13,7 +13,7 @@ export default function Terms() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl font-black text-[#2B1B4E] mb-2 uppercase tracking-tight">
+            <h1 className="text-4xl font-bold text-[#2B1B4E] mb-2 uppercase tracking-tight">
               Termos e Condições
             </h1>
             <p className="text-slate-600 mb-8">Última atualização: 13 de Março de 2026</p>
@@ -21,7 +21,7 @@ export default function Terms() {
             <div className="prose prose-sm max-w-none text-slate-700 leading-relaxed space-y-6">
               
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">1. Identificação</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">1. Identificação</h2>
                 <p>
                   <strong>SKY TERAPIA'S</strong><br />
                   Santarém, Portugal (marcação prévia)<br />
@@ -32,7 +32,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">2. Âmbito</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">2. Âmbito</h2>
                 <p>
                   Estes Termos e Condições regulam:
                 </p>
@@ -44,14 +44,14 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">3. Aceitação dos Termos</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">3. Aceitação dos Termos</h2>
                 <p>
                   Ao aceder e utilizar o website ou solicitar sessões, o utilizador aceita integralmente estes Termos e Condições. Se não concorda, não deve utilizar o website nem marcar sessões.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">4. Serviços Oferecidos</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">4. Serviços Oferecidos</h2>
                 <p>A SKY TERAPIA'S oferece os seguintes serviços:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Tarot cigano e tarot intuitivo</li>
@@ -66,7 +66,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">5. Orçamentos</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">5. Orçamentos</h2>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Validade:</strong> Orçamentos válidos por 30 dias a contar da data de emissão</li>
                   <li><strong>Condições:</strong> Pressupostos mantêm-se inalterados se o cliente não solicitar alterações</li>
@@ -76,7 +76,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">6. Contrato de Serviço</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">6. Contrato de Serviço</h2>
                 <h3 className="text-lg font-bold text-[#2B1B4E] mt-4 mb-2">6.1 Formação</h3>
                 <p>
                   O contrato é formado quando: (i) cliente aceita o orçamento; (ii) cliente efetua pagamento de sinal, se requerido; (iii) SKY TERAPIA'S confirma execução do serviço.
@@ -104,7 +104,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">7. Responsabilidades do Cliente</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">7. Responsabilidades do Cliente</h2>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Fornecer informação verdadeira relevante para a sessão</li>
                   <li>Comunicar caso esteja a ser acompanhado por um profissional de saúde</li>
@@ -115,7 +115,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">8. Limitação de Responsabilidade</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">8. Limitação de Responsabilidade</h2>
                 <p>
                   <strong>A SKY TERAPIA'S não é responsável por:</strong>
                 </p>
@@ -128,7 +128,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">9. Cancelamento e Direito de Arrependimento</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">9. Cancelamento e Direito de Arrependimento</h2>
                 <h3 className="text-lg font-bold text-[#2B1B4E] mt-4 mb-2">9.1 Cancelamento pelo Cliente</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Antes da sessão:</strong> Direito de arrependimento dentro de 14 dias (Lei do Consumidor), desde que a sessão ainda não tenha ocorrido</li>
@@ -142,7 +142,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">10. Formação e Qualificações</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">10. Formação e Qualificações</h2>
                 <p>
                   A SKY TERAPIA'S possui:
                 </p>
@@ -153,7 +153,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">11. Resolução de Conflitos</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">11. Resolução de Conflitos</h2>
                 <h3 className="text-lg font-bold text-[#2B1B4E] mt-4 mb-2">11.1 Tentativa de Resolução Amigável</h3>
                 <p>
                   Qualquer litígio será resolvido através de negociação amigável entre as partes no prazo de 30 dias.
@@ -178,7 +178,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">12. Livro de Reclamações</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">12. Livro de Reclamações</h2>
                 <p>
                   O cliente tem direito de consultar e preencher o Livro de Reclamações Eletrónico em:
                 </p>
@@ -191,14 +191,14 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">13. Propriedade Intelectual</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">13. Propriedade Intelectual</h2>
                 <p>
                   Todo o conteúdo do website (textos, imagens, designs, logotipos) é propriedade de SKY TERAPIA'S ou dos seus fornecedores. Proibida reprodução sem autorização.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">14. Condições de Uso do Website</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">14. Condições de Uso do Website</h2>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Proibido conteúdo ilegal, ofensivo ou discriminatório</li>
                   <li>Proibido spam, publicidade não autorizada ou phishing</li>
@@ -208,7 +208,7 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">15. Conformidade Legal</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">15. Conformidade Legal</h2>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Lei n.º 58/2019 (RGPD em Portugal)</li>
                   <li>Lei do Consumidor: Decreto-Lei n.º 24/96</li>
@@ -218,14 +218,14 @@ export default function Terms() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">16. Alterações aos Termos</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">16. Alterações aos Termos</h2>
                 <p>
                   SKY TERAPIA'S reserva-se o direito de alterar estes Termos e Condições. Alterações serão publicadas nesta página e entram em vigor imediatamente.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-black text-[#2B1B4E] mt-8 mb-4 uppercase">17. Contacto</h2>
+                <h2 className="text-2xl font-bold text-[#2B1B4E] mt-8 mb-4 uppercase">17. Contacto</h2>
                 <p>
                   Para dúvidas ou reclamações, contacte:
                 </p>

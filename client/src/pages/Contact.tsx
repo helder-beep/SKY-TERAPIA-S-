@@ -1,152 +1,130 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ShopSection } from "@/components/home/ShopSection";
-import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Phone, Mail, Facebook, Instagram, Send, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Link } from "wouter";
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Instagram, MessageCircle } from "lucide-react";
+
+const ADDRESS = "R. João Moreira de Almeida 38, 2005-002 Várzea";
+const MAP_EMBED_URL = "https://www.google.com/maps?q=R.+Jo%C3%A3o+Moreira+de+Almeida+38%2C+2005-002+V%C3%A1rzea&output=embed";
+const MAP_LINK = "https://www.google.com/maps/search/?api=1&query=R.+Jo%C3%A3o+Moreira+de+Almeida+38%2C+2005-002+V%C3%A1rzea";
 
 export default function Contact() {
-  const openForm = () => {
-    const event = new CustomEvent('open-quote-form');
-    window.dispatchEvent(event);
-  };
-
   const openWhatsApp = () => {
     window.open("https://wa.me/351923366826", "_blank");
-  };
-
-  const locations = {
-    loja: {
-      title: "SKY TERAPIA'S",
-      subtitle: "Terapias Holísticas",
-      description: "Tarot, reiki e terapias holísticas num espaço acolhedor e reservado em Santarém.",
-      mapUrl: "https://www.google.com/maps/embed?pb=SUBSTITUIR_EMBED",
-      googleMapsLink: "https://maps.google.com"
-    },
-    escritorio: {
-      title: "Área de Atuação",
-      subtitle: "Santarém, Cartaxo, Almeirim, Tomar, Torres Novas",
-      description: "Atendimento presencial em Santarém e arredores, com sessões online disponíveis para todo o país.",
-      mapUrl: "https://www.google.com/maps/embed?pb=SUBSTITUIR_EMBED",
-      googleMapsLink: "https://maps.google.com"
-    }
   };
 
   return (
     <div className="min-h-screen bg-white text-[#2B1B4E] font-sans">
       <Navbar />
-      
-      <main className="pt-20">
-        {/* Banner Hero */}
-        <section className="relative h-[15vh] md:h-[20vh] min-h-[120px] overflow-hidden flex items-center mb-0">
-          <div className="absolute inset-0 bg-[#2B1B4E]" />
-          <div className="container mx-auto px-4 md:px-8 xl:px-12 max-w-[1400px] relative z-20 text-center">
+
+      <main className="pt-24 md:pt-32 pb-16 md:pb-20">
+        <div className="container mx-auto px-4 md:px-8 xl:px-12 max-w-[1200px]">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10 md:mb-14"
+          >
+            <h1 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter text-[#2B1B4E] mb-3">
+              Fala <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal">connosco</span>
+            </h1>
+            <p className="text-[#2B1B4E]/60 text-sm md:text-base">
+              Escolhe o canal mais fácil e trata-se da tua marcação.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+            {/* Left: Contact channels */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: -15 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white border-2 border-[#2B1B4E] rounded-2xl p-6 md:p-8 flex flex-col justify-center gap-3"
             >
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-none px-4">
-                CONTACTE-<span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal px-2">nos</span>
-              </h1>
+              <button
+                onClick={openWhatsApp}
+                className="group flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors text-left"
+              >
+                <div className="w-11 h-11 rounded-full bg-[#25D366]/10 flex items-center justify-center shrink-0 group-hover:bg-[#25D366] group-hover:text-white transition-all">
+                  <MessageCircle className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold uppercase text-sm tracking-tight text-[#2B1B4E]">WhatsApp</h3>
+                  <p className="text-xs text-[#2B1B4E]/60">Resposta rápida</p>
+                </div>
+              </button>
+
+              <a
+                href="tel:+351923366826"
+                className="group flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors"
+              >
+                <div className="w-11 h-11 rounded-full bg-[#9B6DC9]/10 flex items-center justify-center shrink-0 group-hover:bg-[#9B6DC9] group-hover:text-white transition-all">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold uppercase text-sm tracking-tight text-[#2B1B4E]">Telefone</h3>
+                  <p className="text-xs text-[#2B1B4E]/60">+351 923 366 826</p>
+                </div>
+              </a>
+
+              <a
+                href="mailto:terapiassky1@gmail.com"
+                className="group flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors"
+              >
+                <div className="w-11 h-11 rounded-full bg-[#2B1B4E]/10 flex items-center justify-center shrink-0 group-hover:bg-[#2B1B4E] group-hover:text-white transition-all">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold uppercase text-sm tracking-tight text-[#2B1B4E]">Email</h3>
+                  <p className="text-xs text-[#2B1B4E]/60">terapiassky1@gmail.com</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors"
+              >
+                <div className="w-11 h-11 rounded-full bg-pink-50 flex items-center justify-center shrink-0 group-hover:bg-gradient-to-tr group-hover:from-[#f09433] group-hover:via-[#dc2743] group-hover:to-[#bc1888] group-hover:text-white transition-all">
+                  <Instagram className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold uppercase text-sm tracking-tight text-[#2B1B4E]">Instagram</h3>
+                  <p className="text-xs text-[#2B1B4E]/60">[@ Instagram a confirmar]</p>
+                </div>
+              </a>
+            </motion.div>
+
+            {/* Right: Location */}
+            <motion.div
+              initial={{ opacity: 0, x: 15 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col"
+            >
+              <a
+                href={MAP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 mb-3 text-[#2B1B4E]/70 text-sm hover:text-[#9B6DC9] transition-colors"
+              >
+                <MapPin className="w-4 h-4 text-[#9B6DC9] shrink-0" />
+                {ADDRESS}
+              </a>
+              <div className="rounded-2xl overflow-hidden shadow-md border-2 border-[#2B1B4E] flex-1 min-h-[280px]">
+                <iframe
+                  src={MAP_EMBED_URL}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: 280 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização Sky Terapia's"
+                />
+              </div>
             </motion.div>
           </div>
-        </section>
-
-        <section className="relative py-12 md:py-32">
-          {/* Background Layer */}
-          <div className="absolute inset-0 bg-muted z-0" />
-          <div className="absolute inset-0 bg-white/40 md:bg-transparent z-0" />
-          
-          <div className="container mx-auto px-4 md:px-8 xl:px-12 max-w-[1400px] relative z-10">
-            <div className="flex justify-center items-center">
-              {/* Contact Info Grid */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="w-full max-w-4xl bg-white/95 backdrop-blur-sm p-6 md:p-12 rounded-[4px] border-2 border-[#2B1B4E] shadow-xl flex flex-col"
-              >
-                <div className="text-center">
-                  <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4 text-[#2B1B4E]">Entre em Contacto</h2>
-                  <p className="text-[#2B1B4E]/60 font-light uppercase tracking-widest text-[10px] md:text-sm px-4 md:px-0 leading-relaxed mb-8">Escolha o canal de sua preferência para falar connosco.</p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                  {/* WhatsApp */}
-                  <button 
-                    onClick={openWhatsApp}
-                    className="group bg-white p-5 md:p-6 rounded-[4px] shadow-sm hover:shadow-xl transition-all border-2 border-[#2B1B4E] flex items-center gap-5 md:gap-6"
-                  >
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366]/10 flex items-center justify-center shrink-0 group-hover:bg-[#25D366] group-hover:text-white transition-all duration-500">
-                      <MessageCircle className="w-6 h-6" />
-                    </div>
-                    <div className="text-left">
-                      <h3 className="font-black uppercase text-xs md:text-sm tracking-tight text-[#2B1B4E]">WhatsApp</h3>
-                      <p className="text-[10px] md:text-xs text-[#2B1B4E]/60 uppercase tracking-widest">Resposta rápida</p>
-                    </div>
-                  </button>
-
-                  {/* Phone Primary */}
-                  <a
-                    href="tel:+351923366826"
-                    className="group bg-white p-5 md:p-6 rounded-[4px] shadow-sm hover:shadow-xl transition-all border-2 border-[#2B1B4E] flex items-center gap-5 md:gap-6"
-                  >
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#9B6DC9]/10 flex items-center justify-center shrink-0 group-hover:bg-[#9B6DC9] group-hover:text-white transition-all duration-500">
-                      <Phone className="w-6 h-6" />
-                    </div>
-                    <div className="text-left">
-                      <h3 className="font-black uppercase text-xs md:text-sm tracking-tight text-[#2B1B4E]">Ligar (Telemóvel)</h3>
-                      <p className="text-[10px] md:text-xs text-[#2B1B4E]/60 uppercase tracking-widest">+351 923 366 826</p>
-                    </div>
-                  </a>
-
-                  {/* Email */}
-                  <a
-                    href="mailto:terapiassky1@gmail.com"
-                    className="group bg-white p-5 md:p-6 rounded-[4px] shadow-sm hover:shadow-xl transition-all border-2 border-[#2B1B4E] flex items-center gap-5 md:gap-6"
-                  >
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#2B1B4E]/10 flex items-center justify-center shrink-0 group-hover:bg-[#2B1B4E] group-hover:text-white transition-all duration-500">
-                      <Mail className="w-6 h-6" />
-                    </div>
-                    <div className="text-left">
-                      <h3 className="font-black uppercase text-xs md:text-sm tracking-tight text-[#2B1B4E]">Email</h3>
-                      <p className="text-[10px] md:text-xs text-[#2B1B4E]/60 uppercase tracking-widest">terapiassky1@gmail.com</p>
-                    </div>
-                  </a>
-
-                  {/* Instagram */}
-                  <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group bg-white p-5 md:p-6 rounded-[4px] shadow-sm hover:shadow-xl transition-all border-2 border-[#2B1B4E] flex items-center gap-5 md:gap-6"
-                  >
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-pink-50 flex items-center justify-center shrink-0 group-hover:bg-gradient-to-tr group-hover:from-[#f09433] group-hover:via-[#dc2743] group-hover:to-[#bc1888] group-hover:text-white transition-all duration-500">
-                      <Instagram className="w-6 h-6" />
-                    </div>
-                    <div className="text-left">
-                      <h3 className="font-black uppercase text-xs md:text-sm tracking-tight text-[#2B1B4E]">Instagram</h3>
-                      <p className="text-[10px] md:text-xs text-[#2B1B4E]/60 uppercase tracking-widest">[@ Instagram a confirmar]</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div className="pt-8 md:pt-10 max-w-sm mx-auto w-full">
-                  <Link href="/orcamento">
-                    <Button 
-                      className="w-full bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black uppercase tracking-[0.15em] md:tracking-[0.2em] h-14 md:h-16 rounded-[4px] shadow-xl transition-all text-xs md:text-sm"
-                    >
-                      Marcar Consulta
-                    </Button>
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        </div>
       </main>
 
       <Footer />

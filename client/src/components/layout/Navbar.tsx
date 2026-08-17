@@ -55,7 +55,7 @@ export function Navbar() {
   }, [location]);
 
   const linkClass = cn(
-    "text-sm font-black transition-colors hover:text-[#9B6DC9] cursor-pointer flex items-center gap-1 uppercase tracking-tight",
+    "text-sm font-bold transition-colors hover:text-[#9B6DC9] cursor-pointer flex items-center gap-1 uppercase tracking-tight",
     "text-[#2B1B4E] font-sans"
   );
 
@@ -69,10 +69,10 @@ export function Navbar() {
       {/* Top Info Bar */}
       <div className="bg-[#2B1B4E] py-1.5 hidden md:block">
         <div className="container mx-auto px-4 md:px-8 xl:px-12 max-w-[1400px]">
-          <div className="flex justify-between items-center text-xs md:text-sm text-white font-black tracking-tight uppercase">
+          <div className="flex justify-between items-center text-xs md:text-sm text-white font-bold tracking-tight uppercase">
             <div className="flex items-center gap-6">
               <a
-                href="https://maps.google.com"
+                href="https://www.google.com/maps/search/?api=1&query=R.+Jo%C3%A3o+Moreira+de+Almeida+38%2C+2005-002+V%C3%A1rzea"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-[#E8B54D] transition-colors"
@@ -158,13 +158,9 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="/contacto" className={linkClass}>
-              Contacto
-            </Link>
-
-            <Link href="/orcamento">
+            <Link href="/contacto">
               <Button
-                className="font-black rounded-sm px-6 h-11 transition-all uppercase text-xs tracking-wider bg-[#2B1B4E] text-white hover:bg-[#9B6DC9] shadow-lg hover:scale-105"
+                className="font-medium rounded-full px-6 h-11 transition-all uppercase text-xs tracking-wide bg-[#2B1B4E] text-white hover:bg-[#9B6DC9] shadow-lg hover:scale-105"
               >
                 Marcar Consulta
               </Button>
@@ -190,7 +186,7 @@ export function Navbar() {
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b p-4 flex flex-col gap-2 shadow-lg animate-in slide-in-from-top-5 max-h-[80vh] overflow-y-auto">
           <Link 
             href="/" 
-            className="text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
+            className="text-[#2B1B4E] font-bold py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Início
@@ -198,7 +194,7 @@ export function Navbar() {
           
           <Link 
             href="/empresa" 
-            className="text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
+            className="text-[#2B1B4E] font-bold py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Sobre Mim
@@ -208,7 +204,7 @@ export function Navbar() {
           <div>
             <button 
               onClick={() => setMobileServicosOpen(!mobileServicosOpen)}
-              className="w-full text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg flex items-center justify-between uppercase tracking-tighter"
+              className="w-full text-[#2B1B4E] font-bold py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg flex items-center justify-between uppercase tracking-tighter"
             >
               Serviços
               <ChevronDown className={cn("w-5 h-5 transition-transform", mobileServicosOpen && "rotate-180")} />
@@ -233,7 +229,7 @@ export function Navbar() {
           <div>
             <button 
               onClick={() => setMobileAreasOpen(!mobileAreasOpen)}
-              className="w-full text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg flex items-center justify-between uppercase tracking-tighter"
+              className="w-full text-[#2B1B4E] font-bold py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg flex items-center justify-between uppercase tracking-tighter"
             >
               Áreas de Serviço
               <ChevronDown className={cn("w-5 h-5 transition-transform", mobileAreasOpen && "rotate-180")} />
@@ -254,17 +250,9 @@ export function Navbar() {
             )}
           </div>
 
-          <Link 
-            href="/contacto" 
-            className="text-[#2B1B4E] font-black py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Contacto
-          </Link>
-
-          <Link href="/orcamento">
+          <Link href="/contacto">
             <Button 
-              className="w-full rounded-sm mt-4 h-12 text-sm font-black uppercase tracking-wider bg-[#2B1B4E] text-white"
+              className="w-full rounded-full mt-4 h-12 text-sm font-medium uppercase tracking-wide bg-[#2B1B4E] text-white"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Marcar Consulta

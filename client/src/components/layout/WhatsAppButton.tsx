@@ -15,7 +15,7 @@ export function WhatsAppButton() {
       data-testid="link-whatsapp"
     >
       <SiWhatsapp className="w-8 h-8" />
-      <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-[#0A3D5D] px-4 py-2 rounded-lg text-sm font-black shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+      <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-[#0A3D5D] px-4 py-2 rounded-lg text-sm font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
         Falar no WhatsApp
       </span>
     </a>

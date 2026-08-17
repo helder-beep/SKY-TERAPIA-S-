@@ -55,7 +55,7 @@ export function GrassHeightSection() {
         {/* Header matching screenshot */}
         <div className="relative mb-8">
           <div className="text-center mb-4">
-            <h2 className="text-xl md:text-3xl font-black uppercase tracking-tight text-[#2B1B4E]">
+            <h2 className="text-xl md:text-3xl font-bold uppercase tracking-tight text-[#2B1B4E]">
               Encontra a <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal">tua sessão</span>
             </h2>
           </div>
@@ -69,7 +69,7 @@ export function GrassHeightSection() {
               key={h.id}
               onClick={() => setActiveTab(h)}
               className={cn(
-                "text-[10px] md:text-xs font-black uppercase tracking-widest py-2 transition-all relative",
+                "text-[10px] md:text-xs font-bold uppercase tracking-wider py-2 transition-all relative",
                 activeTab.id === h.id 
                   ? "text-[#2B1B4E]" 
                   : "text-slate-400 hover:text-slate-600"
@@ -130,9 +130,9 @@ export function GrassHeightSection() {
                   <ul className="space-y-6">
                     {activeTab.points?.map((point, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="text-[#9B6DC9] mt-1.5 font-black">•</span>
+                        <span className="text-[#9B6DC9] mt-1.5 font-bold">•</span>
                         <p className="text-[#2B1B4E]/80 text-sm md:text-base leading-relaxed">
-                          <span className="font-black uppercase text-xs tracking-tighter text-[#2B1B4E]">{point.label}:</span> {point.text}
+                          <span className="font-bold uppercase text-xs tracking-tighter text-[#2B1B4E]">{point.label}:</span> {point.text}
                         </p>
                       </li>
                     ))}
@@ -143,7 +143,7 @@ export function GrassHeightSection() {
                       {activeTab.details}
                     </p>
                     <div className="pt-4 border-l-2 border-[#9B6DC9] pl-4">
-                      <p className="text-[#2B1B4E] text-sm md:text-base font-black uppercase tracking-widest mb-1">
+                      <p className="text-[#2B1B4E] text-sm md:text-base font-bold uppercase tracking-wider mb-1">
                         Recomendados especialmente para:
                       </p>
                       <p className="text-[#2B1B4E]/70 font-medium italic lowercase">
@@ -157,7 +157,7 @@ export function GrassHeightSection() {
                 <div className="pt-10 flex justify-center lg:justify-start">
                   <button 
                     onClick={() => window.location.href = "/orcamento"}
-                    className="bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black uppercase tracking-[0.2em] px-10 py-5 rounded-sm shadow-xl transition-all hover:scale-105 text-xs md:text-sm"
+                    className="bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-bold uppercase tracking-[0.1em] px-10 py-5 rounded-md shadow-xl transition-all hover:scale-105 text-xs md:text-sm"
                   >
                     {activeTab.isOverview ? "QUAL SESSÃO ESCOLHER?" : "MARCAR ESTA SESSÃO"}
                   </button>

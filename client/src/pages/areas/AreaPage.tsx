@@ -81,11 +81,11 @@ export default function AreaPage() {
             >
               <div className="flex items-center justify-center gap-2 mb-4">
                 <MapPin className="w-5 h-5 text-[#E8B54D]" />
-                <span className="text-[#E8B54D] text-xs font-black uppercase tracking-[0.3em]">
+                <span className="text-[#E8B54D] text-xs font-bold uppercase tracking-[0.15em]">
                   Área de Serviço
                 </span>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-none">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white uppercase tracking-tight leading-none">
                 Terapias em <span className="text-[#E8B54D]">{area.name}</span>
               </h1>
             </motion.div>
@@ -103,18 +103,18 @@ export default function AreaPage() {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <h2 className="text-3xl md:text-4xl font-black text-[#2B1B4E] uppercase tracking-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#2B1B4E] uppercase tracking-tight">
                   Terapias Holísticas em {area.name}
                 </h2>
                 <p className="text-[#2B1B4E]/70 text-base md:text-lg leading-relaxed">
                   {area.description}
                 </p>
                 <p className="text-[#2B1B4E]/70 text-base md:text-lg leading-relaxed">
-                  Com formação certificada pela DGERT e mais de 4 anos de experiência, garantimos sempre total sigilo e um acompanhamento próximo, adaptado a ti.
+                  Com formação certificada pela DGERT e mais de 4 anos de prática pessoal em tarot e espiritualidade, garantimos sempre total sigilo e um acompanhamento próximo, adaptado a ti.
                 </p>
 
                 <div className="space-y-4 pt-4">
-                  <h3 className="text-lg font-black text-[#2B1B4E] uppercase">As nossas terapias em {area.name}:</h3>
+                  <h3 className="text-lg font-bold text-[#2B1B4E] uppercase">As nossas terapias em {area.name}:</h3>
                   <div className="space-y-3">
                     {["Tarot Cigano Intuitivo", "Terapia de Vidas Passadas", "Reiki & Cura Energética", "Psicoterapia Holística"].map((service, i) => (
                       <div key={i} className="flex items-center gap-3">
@@ -126,14 +126,14 @@ export default function AreaPage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                  <Link href="/orcamento">
-                    <Button className="bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm shadow-lg">
+                  <Link href="/contacto">
+                    <Button className="bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-bold uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-md shadow-lg">
                       Marcar Consulta Grátis
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
                   <a href="tel:+351923366826">
-                    <Button variant="outline" className="border-2 border-[#2B1B4E] text-[#2B1B4E] hover:bg-[#2B1B4E] hover:text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm">
+                    <Button className="bg-white border-2 border-[#2B1B4E] text-[#2B1B4E] hover:bg-[#2B1B4E] hover:text-white font-bold uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-md shadow-none">
                       <Phone className="w-5 h-5 mr-2" />
                       Ligar Agora
                     </Button>
@@ -148,8 +148,8 @@ export default function AreaPage() {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-[#2B1B4E] to-[#3D2766] p-8 md:p-10 rounded-lg"
               >
-                <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-6">
-                  Zonas que servimos em {area.name}
+                <h3 className="text-2xl font-bold text-white uppercase tracking-tight mb-6">
+                  {slug === "santarem" ? `Zonas que servimos em ${area.name}` : `Já recebemos clientes de`}
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {area.neighborhoods.map((neighborhood, i) => (
@@ -161,7 +161,9 @@ export default function AreaPage() {
                 </div>
                 <div className="mt-8 pt-6 border-t border-white/20">
                   <p className="text-white/70 text-sm">
-                    Não encontra a sua zona? Contacte-nos! Provavelmente também cobrimos a sua área.
+                    {slug === "santarem"
+                      ? "Não encontra a sua zona? Contacte-nos! Provavelmente também cobrimos a sua área."
+                      : `O nosso espaço físico é em Santarém — para clientes de ${area.name}, trabalhamos por sessão presencial (mediante marcação) ou online.`}
                   </p>
                 </div>
               </motion.div>

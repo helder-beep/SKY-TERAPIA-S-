@@ -18,10 +18,10 @@ export function CTA() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="text-[#E8B54D] text-xs font-black uppercase tracking-[0.3em] mb-4 block">
+          <span className="text-[#E8B54D] text-xs font-bold uppercase tracking-[0.15em] mb-4 block">
             Pronto para Começar?
           </span>
-          <h2 className="text-[1.75rem] md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-5 md:mb-6 leading-tight">
+          <h2 className="text-[1.75rem] md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight mb-5 md:mb-6 leading-tight">
             Dá o Primeiro Passo Rumo ao <span className="text-[#E8B54D]">Teu Equilíbrio</span>
           </h2>
           <p className="text-white/80 text-sm md:text-lg mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -29,9 +29,9 @@ export function CTA() {
           </p>
 
           <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-center">
-            <Link href="/orcamento">
+            <Link href="/contacto">
               <Button
-                className="w-full sm:w-auto bg-white text-[#2B1B4E] hover:bg-[#E8B54D] hover:text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm shadow-xl transition-all hover:scale-105"
+                className="w-full sm:w-auto bg-white text-[#2B1B4E] hover:bg-[#E8B54D] hover:text-white font-medium uppercase tracking-wide px-8 py-6 h-auto text-sm rounded-full shadow-xl transition-all hover:scale-105"
               >
                 Marcar a Minha Consulta
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -39,8 +39,7 @@ export function CTA() {
             </Link>
             <a href="tel:+351923366826">
               <Button
-                variant="outline"
-                className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-[#2B1B4E] font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm transition-all bg-transparent"
+                className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-[#2B1B4E] font-medium uppercase tracking-wide px-8 py-6 h-auto text-sm rounded-full transition-all bg-transparent shadow-none"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Ligar Agora

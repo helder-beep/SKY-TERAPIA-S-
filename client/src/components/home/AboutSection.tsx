@@ -9,7 +9,7 @@ const features = [
   "Sigilo e confidencialidade total",
   "Espaço acolhedor e reservado",
   "Atendimento presencial e online",
-  "4 anos de experiência",
+  "Anos de prática em tarot",
   "Cursos e workshops"
 ];
 
@@ -25,14 +25,14 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="space-y-5 md:space-y-6 text-center lg:text-left"
           >
-            <span className="text-[#9B6DC9] text-xs font-black uppercase tracking-[0.3em] block mb-2">
+            <span className="text-[#9B6DC9] text-xs font-bold uppercase tracking-[0.15em] block mb-2">
               Sobre Nós
             </span>
-            <h2 className="text-[1.75rem] md:text-5xl font-black text-[#2B1B4E] uppercase tracking-tight leading-tight">
+            <h2 className="text-[1.75rem] md:text-5xl font-bold text-[#2B1B4E] uppercase tracking-tight leading-tight">
               Sobre a <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal">Sky Terapia's</span>
             </h2>
             <p className="text-[#2B1B4E]/70 text-sm md:text-lg leading-relaxed">
-              Somos uma marca de terapias holísticas com 4 anos de experiência, formação certificada pela DGERT, e trabalhamos em Santarém com tarot cigano, terapia de vidas passadas, reiki, psicoterapia e outras terapias energéticas.
+              A Sky Terapia's nasceu em memória da mãe da Cláudia, Céu — e é por isso que leva o nome Sky. Com formação certificada pela DGERT, trabalhamos em Santarém com tarot cigano, terapia de vidas passadas, reiki, psicoterapia e outras terapias energéticas.
             </p>
             <p className="text-[#2B1B4E]/70 text-sm md:text-lg leading-relaxed">
               A nossa missão é ajudar-te a encontrar clareza, cura e equilíbrio — num espaço acolhedor, reservado e com total sigilo sobre cada sessão.
@@ -49,7 +49,7 @@ export function AboutSection() {
 
             <div className="pt-6">
               <Link href="/empresa">
-                <Button className="w-full lg:w-auto bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-sm shadow-lg transition-all hover:scale-105">
+                <Button className="w-full lg:w-auto bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-bold uppercase tracking-wider px-8 py-6 h-auto text-sm rounded-md shadow-lg transition-all hover:scale-105">
                   Conhecer a Terapeuta
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -66,26 +66,18 @@ export function AboutSection() {
           >
             <div className="aspect-[4/3] md:aspect-square bg-gradient-to-br from-[#2B1B4E] to-[#9B6DC9] rounded-lg overflow-hidden relative w-full">
               <ImagePlaceholder
-                src="/images/espaco/mesa-tarot-ambiente.jpg"
+                src="/images/espaco/sala-completa.jpg"
                 label="Espaço de atendimento Sky Terapia's"
                 width={800}
                 height={800}
                 className="absolute inset-0 w-full h-full"
               />
-              <div className="absolute inset-0 bg-black/20" />
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M30%200L60%2030L30%2060L0%2030z%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%2F%3E%3C%2Fsvg%3E')]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="text-5xl md:text-8xl font-black mb-2">4+</div>
-                  <div className="text-lg md:text-2xl font-bold uppercase tracking-wider">Anos de</div>
-                  <div className="text-lg md:text-2xl font-black uppercase tracking-wider">Experiência</div>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-black/10" />
             </div>
 
             {/* Floating Badge - hidden on mobile to avoid overflow */}
             <div className="hidden md:block absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl border-2 border-[#2B1B4E]">
-              <div className="text-4xl font-black text-[#2B1B4E]">100%</div>
+              <div className="text-4xl font-bold text-[#2B1B4E]">100%</div>
               <div className="text-sm font-bold text-[#2B1B4E]/70 uppercase tracking-wider">Confidencial</div>
             </div>
           </motion.div>

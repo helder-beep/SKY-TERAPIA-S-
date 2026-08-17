@@ -6,59 +6,67 @@ export function Hero() {
   const [, setLocation] = useLocation();
 
   return (
-    <div id="home" className="relative min-h-screen w-full overflow-hidden bg-white pt-16 md:pt-24">
-      {/* Background Image Layer */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 w-full h-full">
-          <ImagePlaceholder
-            src="/images/stock/hero-tarot-candles.jpg"
-            label="Tarot, cristais e velas"
-            width={1920}
-            height={1080}
-            className="w-full h-full"
-          />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+    <div id="home" className="relative w-full overflow-hidden bg-white lg:h-screen">
+      <div className="lg:h-full flex flex-col justify-center pt-24 md:pt-28 lg:pt-20 pb-12 md:pb-16 lg:pb-6">
+        <div className="container mx-auto px-6 md:px-8 xl:px-12 max-w-[1400px] w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            {/* Left: Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-center lg:text-left"
+            >
+              <div className="inline-block border-l-4 border-[#9B6DC9] pl-4 mb-4 md:mb-6">
+                <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.15em] text-[#2B1B4E]">Terapias Holísticas · Santarém</span>
+              </div>
+
+              <h1 className="text-4xl sm:text-[2.75rem] md:text-5xl lg:text-6xl font-bold uppercase tracking-tighter leading-[1.05] text-[#2B1B4E] mb-4 md:mb-6">
+                <span className="hidden md:block font-display italic normal-case font-normal text-[#9B6DC9] mb-1 md:mb-2 lowercase tracking-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl">encontra o teu equilíbrio</span>
+                SKY TERAPIA'S <br className="hidden md:block" />
+                <span className="hidden md:block font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl">tarot, reiki & terapia da alma</span>
+              </h1>
+
+              <p className="text-xs sm:text-sm md:text-base font-medium text-[#2B1B4E]/70 max-w-lg mb-8 md:mb-8 uppercase tracking-wider leading-relaxed mx-auto lg:mx-0">
+                Tarot cigano, terapia de vidas passadas, reiki e psicoterapia holística num espaço acolhedor e reservado em Santarém.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                <button
+                  onClick={() => setLocation("/contacto")}
+                  className="w-auto mx-auto sm:mx-0 bg-[#9B6DC9] text-white px-7 py-3 rounded-full font-medium uppercase tracking-wide hover:bg-[#7C4DA8] transition-colors text-xs sm:text-sm"
+                >
+                  Marcar Consulta
+                </button>
+                <button
+                  onClick={() => setLocation("/empresa")}
+                  className="w-auto mx-auto sm:mx-0 border-2 border-[#2B1B4E] text-[#2B1B4E] px-7 py-3 rounded-full font-medium uppercase tracking-wide hover:bg-[#2B1B4E] hover:text-white transition-all text-xs sm:text-sm"
+                >
+                  Ver o Espaço
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Right: Image (hidden on smaller screens so the hero always fits one viewport) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+              className="relative hidden lg:block"
+            >
+              <div className="h-[52vh] max-h-[560px] w-full overflow-hidden rounded-lg shadow-2xl">
+                <ImagePlaceholder
+                  src="/images/stock/hero-tarot-candles.jpg"
+                  label="Tarot, cristais e velas"
+                  width={900}
+                  height={1100}
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full rounded-lg border-4 border-[#9B6DC9]/30" />
+            </motion.div>
+          </div>
         </div>
-      </div>
-      {/* Content Container */}
-      <div className="relative z-20 container mx-auto px-6 md:px-8 xl:px-12 max-w-[1400px] h-full flex flex-col justify-center pt-16 pb-24 md:py-32">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl text-center md:text-left mx-auto md:mx-0"
-        >
-          <div className="inline-block border-l-4 border-[#9B6DC9] pl-4 mb-6 md:mb-8 mx-auto md:mx-0">
-            <span className="text-[11px] md:text-sm font-black uppercase tracking-[0.3em] text-white">Terapias Holísticas · Santarém</span>
-          </div>
-
-          <h1 className="text-[2.5rem] md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white mb-6 md:mb-6">
-            <span className="font-display italic normal-case font-normal text-[#9B6DC9] block mb-2 lowercase tracking-normal">encontra o teu equilíbrio</span>
-            SKY TERAPIA'S <br className="hidden md:block" />
-            <span className="font-display italic normal-case font-normal text-[#9B6DC9] lowercase tracking-normal">tarot, reiki & terapia da alma</span>
-          </h1>
-
-          <p className="text-sm md:text-base font-medium text-white/90 max-w-lg mb-10 md:mb-10 uppercase tracking-widest leading-relaxed mx-auto md:mx-0">
-            Tarot cigano, terapia de vidas passadas, reiki e psicoterapia holística num espaço acolhedor e reservado em Santarém.
-          </p>
-
-          <div className="flex flex-col gap-4 md:flex-row md:gap-4">
-            <button
-              onClick={() => setLocation("/orcamento")}
-              className="w-full md:w-auto bg-[#9B6DC9] text-white px-8 py-5 md:py-4 rounded-none font-black uppercase tracking-widest hover:bg-[#7C4DA8] transition-colors text-sm md:text-base"
-            >
-              Marcar Consulta
-            </button>
-            <button
-              onClick={() => {
-                document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="w-full md:w-auto border-2 border-white text-white px-8 py-5 md:py-4 rounded-none font-black uppercase tracking-widest hover:bg-white hover:text-[#2B1B4E] transition-all text-sm md:text-base"
-            >
-              Ver o Espaço
-            </button>
-          </div>
-        </motion.div>
       </div>
     </div>
   );

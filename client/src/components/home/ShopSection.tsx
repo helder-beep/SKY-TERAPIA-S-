@@ -26,15 +26,15 @@ export function ShopSection() {
             >
               <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-[#9B6DC9]/20 rounded-full mb-5 md:mb-8 mx-auto md:mx-0">
                 <ShoppingBag className="w-4 h-4 text-[#9B6DC9]" />
-                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#9B6DC9]">SKY TERAPIA'S</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#9B6DC9]">SKY TERAPIA'S</span>
               </div>
 
-              <h2 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-5 md:mb-8">
+              <h2 className="text-3xl md:text-6xl font-bold text-white uppercase tracking-tighter leading-[0.9] mb-5 md:mb-8">
                 CURSOS E <br className="md:block" />
                 <span className="text-[#9B6DC9]">WORKSHOPS</span>
               </h2>
 
-              <p className="text-[11px] md:text-lg font-light text-white/70 mb-6 md:mb-10 leading-relaxed uppercase tracking-widest max-w-xl mx-auto md:mx-0 px-4 md:px-0">
+              <p className="text-[11px] md:text-lg font-light text-white/70 mb-6 md:mb-10 leading-relaxed uppercase tracking-wider max-w-xl mx-auto md:mx-0 px-4 md:px-0">
                 Além das sessões individuais, damos cursos e workshops de terapias holísticas e marcamos presença em feiras esotéricas por todo o país.
               </p>
 
@@ -77,7 +77,7 @@ export function ShopSection() {
               className="flex flex-col gap-3 md:flex-row md:gap-4 w-full"
             >
               <a href="tel:+351923366826" className="w-full sm:flex-1">
-                <Button className="w-full bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black h-12 md:h-14 rounded-[4px] uppercase tracking-widest text-xs flex items-center justify-center gap-2 transition-all shadow-lg">
+                <Button className="w-full bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-bold h-12 md:h-14 rounded-[4px] uppercase tracking-wider text-xs flex items-center justify-center gap-2 transition-all shadow-lg">
                   <Phone className="w-4 h-4" />
                   Pedir Informações
                 </Button>
@@ -86,7 +86,7 @@ export function ShopSection() {
                 href="mailto:terapiassky1@gmail.com"
                 className="w-full sm:flex-1"
               >
-                <Button className="w-full bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-black h-12 md:h-14 rounded-[4px] uppercase tracking-widest text-xs flex items-center justify-center gap-2 transition-all shadow-lg">
+                <Button className="w-full bg-[#2B1B4E] hover:bg-[#9B6DC9] text-white font-bold h-12 md:h-14 rounded-[4px] uppercase tracking-wider text-xs flex items-center justify-center gap-2 transition-all shadow-lg">
                   <MapPin className="w-4 h-4" />
                   Enviar Email
                 </Button>

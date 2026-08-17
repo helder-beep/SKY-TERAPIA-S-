@@ -18,10 +18,10 @@ export function Process() {
           viewport={{ once: true }}
           className="text-center mb-10 md:mb-16"
         >
-          <span className="text-[#E8B54D] text-xs font-black uppercase tracking-[0.3em] mb-4 block">
+          <span className="text-[#E8B54D] text-xs font-bold uppercase tracking-[0.15em] mb-4 block">
             Como Trabalhamos
           </span>
-          <h2 className="text-[1.75rem] md:text-5xl font-black text-white uppercase tracking-tight mb-4 leading-tight">
+          <h2 className="text-[1.75rem] md:text-5xl font-bold text-white uppercase tracking-tight mb-4 leading-tight">
             O Nosso <span className="text-[#E8B54D]">Processo</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
@@ -44,11 +44,11 @@ export function Process() {
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#9B6DC9] flex items-center justify-center">
                     <step.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                   </div>
-                  <span className="text-3xl md:text-4xl font-black text-white/20 group-hover:text-[#E8B54D]/40 transition-colors">
+                  <span className="text-3xl md:text-4xl font-bold text-white/20 group-hover:text-[#E8B54D]/40 transition-colors">
                     {step.step}
                   </span>
                 </div>
-                <h3 className="text-lg md:text-xl font-black text-white uppercase tracking-tight mb-2 md:mb-3">
+                <h3 className="text-lg md:text-xl font-bold text-white uppercase tracking-tight mb-2 md:mb-3">
                   {step.title}
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
