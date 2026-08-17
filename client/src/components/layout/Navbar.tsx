@@ -123,7 +123,7 @@ export function Navbar() {
             </Link>
 
             <Link href="/empresa" className={linkClass}>
-              Sobre Mim
+              Sobre Nós
             </Link>
 
             {/* Serviços Dropdown */}
@@ -197,7 +197,7 @@ export function Navbar() {
             className="text-[#2B1B4E] font-bold py-3 px-2 hover:text-[#9B6DC9] hover:bg-purple-50 rounded-lg block uppercase tracking-tighter" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Sobre Mim
+            Sobre Nós
           </Link>
 
           {/* Mobile Serviços Accordion */}

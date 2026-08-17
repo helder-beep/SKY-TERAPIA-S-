@@ -54,7 +54,7 @@ export function Footer() {
             {/* Navigation - Matches Navbar Links Styling */}
             <div className="flex flex-col items-center gap-4 md:flex-row md:flex-wrap md:justify-center md:gap-10">
               <Link href="/"><span className="text-xs md:text-sm font-bold text-[#2B1B4E] hover:text-[#9B6DC9] transition-colors cursor-pointer uppercase tracking-tight">Início</span></Link>
-              <Link href="/empresa"><span className="text-xs md:text-sm font-bold text-[#2B1B4E] hover:text-[#9B6DC9] transition-colors cursor-pointer uppercase tracking-tight">Sobre Mim</span></Link>
+              <Link href="/empresa"><span className="text-xs md:text-sm font-bold text-[#2B1B4E] hover:text-[#9B6DC9] transition-colors cursor-pointer uppercase tracking-tight">Sobre Nós</span></Link>
               <Link href="/contacto"><span className="text-xs md:text-sm font-bold text-[#2B1B4E] hover:text-[#9B6DC9] transition-colors cursor-pointer uppercase tracking-tight">Marcar Consulta</span></Link>
             </div>
 
