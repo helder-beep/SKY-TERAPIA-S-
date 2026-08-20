@@ -1,10 +1,16 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
+import { SeoHead } from "@/components/SeoHead";
 
 export default function Terms() {
   return (
     <div className="min-h-screen bg-white">
+      <SeoHead
+        title="Termos e Condições | SKY TERAPIA'S"
+        description="Termos e condições de utilização dos serviços da Sky Terapia's."
+        path="/termos"
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-8 xl:px-12 max-w-[900px]">

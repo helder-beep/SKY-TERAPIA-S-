@@ -1,0 +1,11 @@
+# Formato canónico: https://skyterapias.com/pagina/ — sem www, https, sem redirecionar
+# nada para dentro do sitemap (todas as entradas do sitemap.xml já são finais).
+
+# Forçar www -> sem www
+https://www.skyterapias.com/* https://skyterapias.com/:splat 301!
+
+# Consolidar página duplicada removida (mesmo conteúdo de /areas/todas-as-areas)
+/areas-de-atuacao /areas/todas-as-areas 301!
+
+# SPA fallback (tem de ficar sempre por último)
+/* /index.html 200

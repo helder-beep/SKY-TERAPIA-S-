@@ -6,13 +6,16 @@ import { Link, useRoute } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, CheckCircle, Phone, Plus, Minus } from "lucide-react";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SeoHead } from "@/components/SeoHead";
+import { SITE_URL, buildCanonical } from "@/config/seo";
+import { MATRIX_AREAS, matrixSlug } from "@/data/matrixContent";
 
-interface ServiceFaq {
+export interface ServiceFaq {
   question: string;
   answer: string;
 }
 
-interface ServiceData {
+export interface ServiceData {
   title: string;
   subtitle: string;
   description: string;
@@ -23,7 +26,7 @@ interface ServiceData {
   faqs: ServiceFaq[];
 }
 
-const servicesData: Record<string, ServiceData> = {
+export const servicesData: Record<string, ServiceData> = {
   "tarot-cigano": {
     title: "Tarot Cigano Intuitivo",
     subtitle: "ORIENTAÇÃO E CLAREZA",
@@ -31,7 +34,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "O tarot cigano é uma ferramenta de orientação que combina símbolos tradicionais com a nossa intuição para te ajudar a ver com clareza as situações da tua vida. Cada sessão é feita com total sigilo, num espaço reservado, sem julgamentos — só respostas honestas e orientação prática para as tuas dúvidas sobre amor, trabalho ou decisões importantes.",
     features: ["Leitura de tarot cigano tradicional", "Interpretação intuitiva das cartas", "Foco em amor, trabalho ou vida pessoal", "Sessões presenciais ou online"],
     benefits: ["Mais clareza para decidir", "Respostas diretas e honestas", "Sigilo total sobre a sessão", "Orientação prática para o dia a dia"],
-    image: "/images/espaco/mesa-tarot-detalhe.jpg",
+    image: "/images/espaco/mesa-tarot-detalhe.webp",
     faqs: [
       { question: "Preciso de saber alguma coisa sobre tarot antes da sessão?", answer: "Não, não precisas de qualquer conhecimento prévio. Basta vires com as tuas questões — nós conduzimos o resto." },
       { question: "A sessão pode ser feita online?", answer: "Sim, o tarot cigano funciona muito bem por chamada de vídeo ou voz, com a mesma qualidade da sessão presencial." }
@@ -44,7 +47,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "Muitos medos, bloqueios e padrões repetitivos têm origem em memórias de vidas passadas. Através da terapia de vidas passadas, ajudamos-te a identificar essas marcas e a libertá-las, trazendo mais leveza, compreensão e paz sobre o teu percurso atual. Cada sessão decorre num ambiente calmo e seguro, ao teu ritmo.",
     features: ["Sessão de regressão guiada", "Identificação de padrões repetitivos", "Ambiente calmo e seguro", "Acompanhamento pós-sessão"],
     benefits: ["Liberta bloqueios emocionais antigos", "Traz compreensão sobre padrões atuais", "Promove sensação de leveza e paz", "Sessão individual e confidencial"],
-    image: "/images/espaco/zen-buddha.jpg",
+    image: "/images/espaco/zen-buddha.webp",
     faqs: [
       { question: "É preciso acreditar em vidas passadas para a terapia funcionar?", answer: "Não é obrigatório. Muitas pessoas encontram sentido nas imagens e emoções que surgem, independentemente das suas crenças." },
       { question: "A sessão pode trazer emoções fortes?", answer: "Pode, sim. Por isso o espaço é calmo e seguro, e o ritmo é sempre o teu — nunca forçamos nada." }
@@ -57,7 +60,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "Um acompanhamento próximo e humano, onde a psicoterapia se cruza com ferramentas holísticas para trabalhar ansiedade, autoestima e momentos de transição de vida. As sessões são pensadas para te ouvir sem julgamentos e ajudar-te a encontrar as tuas próprias respostas, sempre com total confidencialidade.",
     features: ["Sessões individuais regulares", "Abordagem holística e humana", "Foco em ansiedade e autoestima", "Acompanhamento em transições de vida"],
     benefits: ["Espaço seguro para falares livremente", "Ferramentas práticas para o dia a dia", "Acompanhamento ao teu ritmo", "Sigilo profissional garantido"],
-    image: "/images/espaco/sala-atendimento.jpg",
+    image: "/images/espaco/sala-atendimento.webp",
     faqs: [
       { question: "Isto substitui ir a um psicólogo?", answer: "Não. É um acompanhamento complementar. Se estás em acompanhamento psicológico ou psiquiátrico, recomendamos que continues em paralelo." },
       { question: "Quantas sessões costumam ser necessárias?", answer: "Depende de cada pessoa. Algumas preferem sessões pontuais, outras um acompanhamento contínuo — decidimos isso juntas." }
@@ -70,7 +73,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "O Reiki é uma técnica de canalização de energia que ajuda a libertar tensões, equilibrar emoções e promover a cura a nível físico, emocional e espiritual. Além das sessões individuais, também trabalhamos a energia de espaços e negócios, ajudando a criar ambientes mais leves e harmoniosos.",
     features: ["Sessão de Reiki presencial", "Cura energética de pessoas", "Harmonização de espaços e negócios", "Ambiente relaxante e acolhedor"],
     benefits: ["Reduz stress e tensão", "Promove equilíbrio emocional", "Melhora a energia do ambiente", "Complementa outras terapias"],
-    image: "/images/espaco/secretaria-difusor.jpg",
+    image: "/images/espaco/secretaria-difusor.webp",
     faqs: [
       { question: "O que sinto durante uma sessão de Reiki?", answer: "É comum sentir calor, formigueiro ou um relaxamento profundo. Cada pessoa sente de forma diferente." },
       { question: "Também fazem Reiki à distância?", answer: "O Reiki de pessoas é feito presencialmente; para espaços e negócios trabalhamos também à distância." }
@@ -83,7 +86,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "Através de defumações e rituais de limpeza energética, ajudamos a renovar a energia da tua casa ou do teu negócio, removendo bloqueios e criando um ambiente mais leve, próspero e harmonioso. Ideal após mudanças, conflitos ou sempre que sentires o ambiente 'pesado'.",
     features: ["Defumação de habitações", "Defumação de espaços comerciais", "Rituais de limpeza energética", "Orientação para manter o espaço equilibrado"],
     benefits: ["Renova a energia do espaço", "Remove bloqueios acumulados", "Cria ambiente mais harmonioso", "Indicado após mudanças ou conflitos"],
-    image: "/images/espaco/estante-cristais-oleos.jpg",
+    image: "/images/espaco/estante-cristais-oleos.webp",
     faqs: [
       { question: "Com que frequência devo fazer uma defumação?", answer: "Depende da situação — pode ser pontual, após um evento marcante, ou periódica para manutenção do espaço." },
       { question: "Funciona em espaços comerciais?", answer: "Sim, fazemos defumações tanto em habitações como em negócios." }
@@ -96,7 +99,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "A mesa radiónica permite trabalhar à distância questões de saúde, finanças e relações, enquanto o EFT (Técnica de Libertação Emocional) usa toques em pontos específicos do corpo para libertar emoções bloqueadas de forma rápida e eficaz. Duas ferramentas complementares para desbloquear o que te impede de avançar.",
     features: ["Trabalho com mesa radiónica", "Sessões de EFT (tapping)", "Pode ser feito à distância", "Foco em saúde, finanças ou relações"],
     benefits: ["Liberta emoções bloqueadas rapidamente", "Funciona também à distância", "Aborda causas energéticas profundas", "Complementa outras terapias"],
-    image: "/images/stock/mesa-radionica.jpg",
+    image: "/images/stock/mesa-radionica.webp",
     faqs: [
       { question: "Preciso de estar presente para a mesa radiónica?", answer: "Não, este trabalho pode ser feito totalmente à distância, sem precisares de estar presencialmente no espaço." },
       { question: "O EFT dói ou é desconfortável?", answer: "Não, é uma técnica suave que envolve apenas toques leves em pontos específicos do corpo." }
@@ -109,7 +112,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "A cromoterapia e a aromaterapia trabalham através dos sentidos — cor e aroma — para promover relaxamento profundo, equilíbrio emocional e uma sensação de bem-estar imediato. São ótimas como complemento a outras sessões ou como uma experiência independente de relaxamento.",
     features: ["Sessão de cromoterapia", "Aromaterapia com óleos essenciais", "Ambiente relaxante e sensorial", "Pode combinar-se com outras terapias"],
     benefits: ["Relaxamento imediato", "Equilíbrio emocional através dos sentidos", "Experiência suave e acessível", "Boa introdução às terapias holísticas"],
-    image: "/images/espaco/estante-decorativa.jpg",
+    image: "/images/espaco/estante-decorativa.webp",
     faqs: [
       { question: "Posso combinar cromoterapia com outra terapia na mesma sessão?", answer: "Sim, é frequentemente usada como complemento a sessões de Reiki ou tarot." },
       { question: "É preciso ter alguma sensibilidade especial para sentir os efeitos?", answer: "Não, é uma experiência acessível a qualquer pessoa, mesmo sem prática anterior." }
@@ -122,7 +125,7 @@ const servicesData: Record<string, ServiceData> = {
     fullContent: "Sessões personalizadas de proteção energética, harmonização amorosa e desbloqueio financeiro, sempre adaptadas à tua situação pessoal. Depois de perceber o que procuras, construímos um trabalho à tua medida, com total confidencialidade sobre o processo e os resultados.",
     features: ["Trabalhos de proteção energética", "Harmonização em relações amorosas", "Desbloqueio e ascensão financeira", "Sessões totalmente personalizadas"],
     benefits: ["Trabalho adaptado à tua situação", "Confidencialidade total", "Acompanhamento próximo", "Foco em resultados práticos"],
-    image: "/images/espaco/cantinho-joias.jpg",
+    image: "/images/espaco/cantinho-joias.webp",
     faqs: [
       { question: "Como sabem que tipo de trabalho fazer no meu caso?", answer: "Começamos sempre por uma conversa para perceber a tua situação específica antes de definirmos o trabalho." },
       { question: "Os resultados são garantidos?", answer: "Não prometemos resultados específicos — cada processo é único. O que garantimos é dedicação total ao teu caso." }
@@ -151,8 +154,45 @@ export default function ServicePage() {
     );
   }
 
+  const path = `/servicos/${slug}`;
+  const canonical = buildCanonical(path);
+  const seoTitle = `${service.title} | SKY TERAPIA'S`;
+  const seoDescription = `${service.description} Marca a tua sessão em Santarém ou online com a Sky Terapia's.`;
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: service.title,
+      description: service.description,
+      areaServed: "Santarém",
+      provider: { "@type": "LocalBusiness", name: "SKY TERAPIA'S", url: `${SITE_URL}/` }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "Serviços", item: canonical },
+        { "@type": "ListItem", position: 3, name: service.title, item: canonical }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: service.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer }
+      }))
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white text-[#2B1B4E] font-sans">
+      <SeoHead title={seoTitle} description={seoDescription} path={path} ogImage={service.image ? `${SITE_URL}${service.image}` : undefined}>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </SeoHead>
       <Navbar />
       <main className="pt-20">
         {/* Banner Hero */}
@@ -293,6 +333,29 @@ export default function ServicePage() {
                           )}
                         </AnimatePresence>
                       </div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Áreas onde trabalhamos */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-xl font-bold text-[#2B1B4E] uppercase tracking-tight mb-6">
+                    Áreas onde trabalhamos
+                  </h3>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {MATRIX_AREAS.map((area) => (
+                      <Link
+                        key={area.slug}
+                        href={`/${matrixSlug(slug, area.slug)}`}
+                        className="flex items-center justify-between p-4 bg-slate-50 rounded-md hover:bg-[#9B6DC9]/10 transition-colors group"
+                      >
+                        <span className="text-[#2B1B4E] font-bold text-sm">{service.title} em {area.name}</span>
+                        <ArrowRight className="w-4 h-4 text-[#9B6DC9] opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </Link>
                     ))}
                   </div>
                 </motion.div>

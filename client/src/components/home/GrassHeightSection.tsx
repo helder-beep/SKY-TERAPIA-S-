@@ -15,7 +15,7 @@ const heights = [
       { label: "Vidas Passadas", text: "indicado para quem sente padrões repetitivos ou bloqueios que parecem não ter origem no presente." },
       { label: "Reiki / Psicoterapia", text: "recomendado para um acompanhamento mais profundo, focado em equilíbrio emocional e energético contínuo." }
     ],
-    image: "/images/espaco/mesa-tarot-ambiente.jpg"
+    image: "/images/espaco/mesa-tarot-ambiente.webp"
   },
   {
     id: "short",
@@ -24,7 +24,7 @@ const heights = [
     description: "Uma leitura de tarot cigano focada numa questão específica.",
     details: "Perfeita para quem precisa de clareza imediata sobre uma situação — uma decisão a tomar, uma dúvida no amor ou no trabalho. A sessão é direta, intuitiva e feita com total sigilo.",
     recommended: "dúvidas pontuais, decisões urgentes, orientação sobre amor e trabalho.",
-    image: "/images/espaco/mesa-tarot-detalhe.jpg"
+    image: "/images/espaco/mesa-tarot-detalhe.webp"
   },
   {
     id: "medium",
@@ -33,7 +33,7 @@ const heights = [
     description: "Uma sessão de regressão para trabalhar bloqueios emocionais mais enraizados.",
     details: "Através da terapia de vidas passadas, exploramos a origem de medos, padrões e bloqueios que se repetem na tua vida atual, promovendo libertação e compreensão.",
     recommended: "padrões repetitivos, medos sem explicação aparente, bloqueios emocionais antigos.",
-    image: "/images/espaco/zen-buddha.jpg"
+    image: "/images/espaco/zen-buddha.webp"
   },
   {
     id: "high",
@@ -42,7 +42,7 @@ const heights = [
     description: "Um percurso de várias sessões para trabalhar o teu equilíbrio a longo prazo.",
     details: "Combinando Reiki, psicoterapia holística e outras técnicas energéticas, construímos um acompanhamento contínuo, adaptado à tua evolução e às tuas necessidades ao longo do tempo.",
     recommended: "ansiedade, transições de vida, quem procura um acompanhamento regular.",
-    image: "/images/espaco/sala-atendimento.jpg"
+    image: "/images/espaco/sala-atendimento.webp"
   }
 ];
 

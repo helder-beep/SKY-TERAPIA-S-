@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { Link, useRoute } from "wouter";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, ArrowRight, CheckCircle } from "lucide-react";
+import { SeoHead } from "@/components/SeoHead";
+import { SITE_URL, buildCanonical } from "@/config/seo";
+import { MATRIX_SERVICES, matrixSlug } from "@/data/matrixContent";
 
-const areasData: Record<string, { name: string; description: string; neighborhoods: string[] }> = {
+export const areasData: Record<string, { name: string; description: string; neighborhoods: string[] }> = {
   "santarem": {
     name: "Santarém",
     description: "Atendimento presencial em Santarém, num espaço reservado e acolhedor, para tarot, reiki, terapia de vidas passadas e restantes terapias holísticas.",
@@ -44,10 +47,9 @@ const areasData: Record<string, { name: string; description: string; neighborhoo
 };
 
 export default function AreaPage() {
-  const [match, params] = useRoute("/areas/:slug");
-  const [isAreaDeAtuacao] = useRoute("/areas-de-atuacao");
-  
-  const slug = isAreaDeAtuacao ? "todas-as-areas" : (params?.slug || "");
+  const [, params] = useRoute("/areas/:slug");
+
+  const slug = params?.slug || "";
   const area = areasData[slug];
 
   if (!area) {
@@ -65,8 +67,43 @@ export default function AreaPage() {
     );
   }
 
+  const path = `/areas/${slug}`;
+  const canonical = buildCanonical(path);
+  const seoTitle = `Terapias Holísticas em ${area.name} | SKY TERAPIA'S`;
+  const seoDescription = `${area.description} Formação certificada pela DGERT, sigilo total e atendimento próximo.`;
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "SKY TERAPIA'S",
+      url: canonical,
+      telephone: "+351923366826",
+      areaServed: area.name,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "R. João Moreira de Almeida 38, 1º andar",
+        addressLocality: "Santarém",
+        postalCode: "2005-002",
+        addressCountry: "PT"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "Áreas de Serviço", item: canonical },
+        { "@type": "ListItem", position: 3, name: area.name, item: canonical }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white text-[#2B1B4E] font-sans">
+      <SeoHead title={seoTitle} description={seoDescription} path={path}>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </SeoHead>
       <Navbar />
       <main className="pt-20">
         {/* Banner Hero */}
@@ -115,12 +152,16 @@ export default function AreaPage() {
 
                 <div className="space-y-4 pt-4">
                   <h3 className="text-lg font-bold text-[#2B1B4E] uppercase">As nossas terapias em {area.name}:</h3>
-                  <div className="space-y-3">
-                    {["Tarot Cigano Intuitivo", "Terapia de Vidas Passadas", "Reiki & Cura Energética", "Psicoterapia Holística"].map((service, i) => (
-                      <div key={i} className="flex items-center gap-3">
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {MATRIX_SERVICES.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/${matrixSlug(service.slug, slug)}`}
+                        className="group flex items-center gap-3 hover:text-[#9B6DC9] transition-colors"
+                      >
                         <CheckCircle className="w-5 h-5 text-[#9B6DC9] flex-shrink-0" />
-                        <span className="text-[#2B1B4E] font-medium">{service}</span>
-                      </div>
+                        <span className="text-[#2B1B4E] group-hover:text-[#9B6DC9] font-medium transition-colors">{service.title}</span>
+                      </Link>
                     ))}
                   </div>
                 </div>

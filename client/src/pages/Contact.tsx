@@ -2,8 +2,9 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Instagram, MessageCircle } from "lucide-react";
+import { SeoHead } from "@/components/SeoHead";
 
-const ADDRESS = "R. João Moreira de Almeida 38, 2005-002 Várzea";
+const ADDRESS = "R. João Moreira de Almeida 38, 1º andar, 2005-002 Várzea";
 const MAP_EMBED_URL = "https://www.google.com/maps?q=R.+Jo%C3%A3o+Moreira+de+Almeida+38%2C+2005-002+V%C3%A1rzea&output=embed";
 const MAP_LINK = "https://www.google.com/maps/search/?api=1&query=R.+Jo%C3%A3o+Moreira+de+Almeida+38%2C+2005-002+V%C3%A1rzea";
 
@@ -14,6 +15,11 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white text-[#2B1B4E] font-sans">
+      <SeoHead
+        title="Contacto | SKY TERAPIA'S — Terapias Holísticas em Santarém"
+        description="Fala connosco por WhatsApp, telefone ou email. Encontra-nos na Rua João Moreira de Almeida, 38, 1º andar, Várzea, Santarém."
+        path="/contacto"
+      />
       <Navbar />
 
       <main className="pt-24 md:pt-32 pb-16 md:pb-20">

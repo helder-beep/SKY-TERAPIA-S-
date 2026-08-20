@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { SeoHead } from "@/components/SeoHead";
 import { Hero } from "@/components/home/Hero";
 import { Services } from "@/components/home/Services";
 import { AboutSection } from "@/components/home/AboutSection";
@@ -10,6 +11,8 @@ import { CTA } from "@/components/home/CTA";
 import { IntegratedServicesSummary } from "@/components/home/IntegratedServicesSummary";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { Link } from "wouter";
+import { MATRIX_AREAS } from "@/data/matrixContent";
 
 function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
   const count = useMotionValue(0);
@@ -35,8 +38,13 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
 export default function Home() {
   return (
     <div className="relative min-h-screen font-sans selection:bg-purple-500/30 bg-white">
+      <SeoHead
+        title="SKY TERAPIA'S — Terapias Holísticas em Santarém"
+        description="Tarot cigano, terapia de vidas passadas, reiki e psicoterapia holística num espaço acolhedor e reservado em Santarém. Marca a tua consulta."
+        path="/"
+      />
       <Navbar />
-      
+
       {/* HERO SECTION */}
       <div className="relative z-10 w-full">
         <Hero />
@@ -87,6 +95,25 @@ export default function Home() {
         <FAQs />
 
         <CTA />
+
+        {/* Áreas Servidas */}
+        <div className="bg-white py-10 md:py-14 border-t border-slate-100">
+          <div className="container mx-auto px-6 md:px-8 xl:px-12 max-w-[1400px] text-center">
+            <p className="text-[#2B1B4E]/50 text-[10px] md:text-xs uppercase tracking-wider mb-3">
+              Levamos as nossas terapias a
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-sm md:text-base">
+              {MATRIX_AREAS.map((area, i) => (
+                <span key={area.slug} className="flex items-center gap-2">
+                  <Link href={`/areas/${area.slug}`} className="text-[#2B1B4E] font-bold hover:text-[#9B6DC9] transition-colors">
+                    {area.name}
+                  </Link>
+                  {i < MATRIX_AREAS.length - 1 && <span className="text-[#2B1B4E]/30">·</span>}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
 
         <Footer />
       </div>

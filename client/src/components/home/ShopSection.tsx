@@ -61,7 +61,7 @@ export function ShopSection() {
             >
               <div className="absolute inset-0 bg-[#9B6DC9]/10 mix-blend-overlay z-10" />
               <ImagePlaceholder
-                src="/images/espaco/estante-cristais-oleos.jpg"
+                src="/images/espaco/estante-cristais-oleos.webp"
                 label="Materiais de cursos e workshops Sky Terapia's"
                 width={1200}
                 height={675}

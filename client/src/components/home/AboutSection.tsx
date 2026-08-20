@@ -66,7 +66,7 @@ export function AboutSection() {
           >
             <div className="aspect-[4/3] md:aspect-square bg-gradient-to-br from-[#2B1B4E] to-[#9B6DC9] rounded-lg overflow-hidden relative w-full">
               <ImagePlaceholder
-                src="/images/espaco/sala-completa.jpg"
+                src="/images/espaco/sala-completa.webp"
                 label="Espaço de atendimento Sky Terapia's"
                 width={800}
                 height={800}

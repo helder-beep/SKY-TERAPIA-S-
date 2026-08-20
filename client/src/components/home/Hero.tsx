@@ -56,10 +56,11 @@ export function Hero() {
             >
               <div className="h-[52vh] max-h-[560px] w-full overflow-hidden rounded-lg shadow-2xl">
                 <ImagePlaceholder
-                  src="/images/stock/hero-tarot-candles.jpg"
-                  label="Tarot, cristais e velas"
+                  src="/images/espaco/sala-completa.webp"
+                  label="Espaço Sky Terapia's em Santarém"
                   width={900}
                   height={1100}
+                  loading="eager"
                   className="w-full h-full"
                 />
               </div>

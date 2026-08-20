@@ -13,6 +13,9 @@ interface ImagePlaceholderProps {
   src?: string;
   /** object-fit da imagem real (default: cover) */
   fit?: "cover" | "contain";
+  /** Carregamento nativo do browser. "lazy" por omissão; usar "eager" só para
+   * a imagem principal acima da dobra (ex: Hero), para não atrasar o LCP. */
+  loading?: "lazy" | "eager";
 }
 
 export function ImagePlaceholder({
@@ -22,12 +25,18 @@ export function ImagePlaceholder({
   className,
   src,
   fit = "cover",
+  loading = "lazy",
 }: ImagePlaceholderProps) {
   if (src) {
     return (
       <img
         src={src}
         alt={label}
+        width={width}
+        height={height}
+        loading={loading}
+        decoding={loading === "eager" ? "sync" : "async"}
+        fetchPriority={loading === "eager" ? "high" : "auto"}
         className={cn(fit === "cover" ? "object-cover" : "object-contain", className)}
       />
     );

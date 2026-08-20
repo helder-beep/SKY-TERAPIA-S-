@@ -6,12 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Users, Shield, Target } from "lucide-react";
 import { Link } from "wouter";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SeoHead } from "@/components/SeoHead";
 
 const espacoFotos = [
-  { src: "/images/espaco/sala-completa.jpg", label: "Sala de atendimento" },
-  { src: "/images/espaco/mesa-tarot-detalhe.jpg", label: "Mesa das cartas" },
-  { src: "/images/espaco/estante-cristais-oleos.jpg", label: "Cristais e óleos" },
-  { src: "/images/espaco/certificados.jpg", label: "Certificações" }
+  { src: "/images/espaco/sala-completa.webp", label: "Sala de atendimento" },
+  { src: "/images/espaco/mesa-tarot-detalhe.webp", label: "Mesa das cartas" },
+  { src: "/images/espaco/estante-cristais-oleos.webp", label: "Cristais e óleos" },
+  { src: "/images/espaco/certificados.webp", label: "Certificações" }
 ];
 
 function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -56,6 +57,11 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-white text-[#2B1B4E] font-sans">
+      <SeoHead
+        title="Sobre Nós | SKY TERAPIA'S — Terapias Holísticas em Santarém"
+        description="Conhece a história da Sky Terapia's, nascida em memória de Céu, e a formação certificada pela DGERT por trás das nossas terapias holísticas em Santarém."
+        path="/empresa"
+      />
       <Navbar />
       <main className="pt-20">
         {/* Banner Hero */}

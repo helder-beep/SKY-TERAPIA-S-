@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { Facebook, Instagram } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
+import { MATRIX_AREAS } from "@/data/matrixContent";
 
 export function Footer() {
   return (
@@ -18,7 +19,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-xs md:text-sm hover:text-[#E8B54D] transition-colors"
               >
-                R. João Moreira de Almeida 38, Várzea, Santarém
+                R. João Moreira de Almeida 38, 1º andar, Várzea, Santarém
               </a>
             </div>
             <div className="flex flex-col gap-1 text-center">
@@ -70,6 +71,23 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Áreas que servimos */}
+      <div className="bg-white pb-6 md:pb-8">
+        <div className="container mx-auto px-4 md:px-8 xl:px-12 max-w-[1400px]">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[10px] md:text-xs text-[#2B1B4E]/50 uppercase tracking-wider">
+            <span className="font-bold text-[#2B1B4E]/70">Áreas que servimos:</span>
+            {MATRIX_AREAS.map((area, i) => (
+              <span key={area.slug} className="flex items-center gap-2">
+                <Link href={`/areas/${area.slug}`} className="hover:text-[#9B6DC9] transition-colors">
+                  {area.name}
+                </Link>
+                {i < MATRIX_AREAS.length - 1 && <span className="opacity-40">·</span>}
+              </span>
+            ))}
           </div>
         </div>
       </div>
